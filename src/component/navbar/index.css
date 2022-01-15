@@ -1,0 +1,17 @@
+#basic-nav-dropdown {
+    color: #000;
+    font-weight: 700;
+    padding: 8px 18px;
+}
+#basic-nav-dropdown:hover, #basic-nav-dropdown:active {
+    background: #e6edf1!important;
+    color: #0277bd!important;
+    border-radius: 10px;
+}
+* {
+    font-family: Cairo,sans-serif
+}
+.navbar-nav > div{
+    display: inline-flex;
+    
+}
