@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import "./index.css";
 
 class NavBar extends Component {
   // state = {  }
@@ -41,38 +40,38 @@ class NavBar extends Component {
                   <NavDropdown.Item href="#action/3.3">
                     Ask The Neighbors
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
+                  <NavDropdown.Item href="#action/3.4">
                     Top Agents
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
+                  <NavDropdown.Item href="#action/3.5">
                     Real Estimate Index
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
+                  <NavDropdown.Item href="#action/3.6">
                     Advice & Tips
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
+                  <NavDropdown.Item href="#action/3.7">
                     Know more.. *
                   </NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="LIST" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">
+                  <NavDropdown.Item href="#action/3.8">
                     List Your Property
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
+                  <NavDropdown.Item href="#action/3.9">
                     List Company Properties
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
               <NavDropdown title="LIST" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">
+                <NavDropdown.Item href="#action/3.10">
                   List Your Property
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
+                <NavDropdown.Item href="#action/3.11">
                   List Company Properties
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#home">عربي</Nav.Link>
-              <Nav.Link href="#home">Help?</Nav.Link>
+              <Nav.Link href="#lang">عربي</Nav.Link>
+              <Nav.Link href="#help">Help?</Nav.Link>
             </Navbar.Collapse>
           </Container>
         </Navbar>

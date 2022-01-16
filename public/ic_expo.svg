@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33">
+  <g id="ic_expo" transform="translate(0.38 0.38)">
+    <rect id="Rectangle_4461-3" data-name="Rectangle 4461-3" width="32" height="32" transform="translate(0.12 0.12)" fill="#0277bd" stroke="#0277bd" stroke-width="1" opacity="0"/>
+    <g id="discount" transform="translate(4.12 4.12)">
+      <path id="Path_8621" data-name="Path 8621" d="M12,24A12,12,0,1,0,0,12,12.014,12.014,0,0,0,12,24ZM12,1.07A10.93,10.93,0,1,1,1.07,12,10.942,10.942,0,0,1,12,1.07Zm0,0" fill="#0277bd" stroke="#0277bd" stroke-width="0.3"/>
+      <path id="Path_8622" data-name="Path 8622" d="M91.528,89.342a2.216,2.216,0,1,0-2.216-2.216A2.216,2.216,0,0,0,91.528,89.342Zm0-3.362a1.146,1.146,0,1,1-1.146,1.146A1.146,1.146,0,0,1,91.528,85.98Zm0,0" transform="translate(-82.486 -78.42)" fill="#0277bd" stroke="#0277bd" stroke-width="0.3"/>
+      <path id="Path_8623" data-name="Path 8623" d="M164.953,175.083a2.216,2.216,0,1,0,2.216-2.216A2.216,2.216,0,0,0,164.953,175.083Zm3.362,0a1.146,1.146,0,1,1-1.146-1.146A1.146,1.146,0,0,1,168.315,175.083Zm0,0" transform="translate(-152.345 -159.654)" fill="#0277bd" stroke="#0277bd" stroke-width="0.3"/>
+      <path id="Path_8624" data-name="Path 8624" d="M100.765,86.7a.535.535,0,0,0,.74-.156l7.563-11.6a.535.535,0,1,0-.9-.585l-7.563,11.6A.535.535,0,0,0,100.765,86.7Zm0,0" transform="translate(-92.839 -68.457)" fill="#0277bd" stroke="#0277bd" stroke-width="0.3"/>
+    </g>
+  </g>
+</svg>

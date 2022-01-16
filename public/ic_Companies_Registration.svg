@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="ic_Companies_Registration" transform="translate(-0.12 -0.12)">
+    <rect id="Rectangle_4461-3" data-name="Rectangle 4461-3" width="32" height="32" transform="translate(0.12 0.12)" opacity="0"/>
+    <g id="contract" transform="translate(4.102 4.12)">
+      <g id="Group_17779" data-name="Group 17779" transform="translate(0.018)">
+        <g id="Group_17778" data-name="Group 17778" transform="translate(0)">
+          <path id="Path_8631" data-name="Path 8631" d="M23.4,7.553a2.112,2.112,0,0,0-2.984,0L18.3,9.671V4.1a2.1,2.1,0,0,0-.618-1.492L15.694.618A2.1,2.1,0,0,0,14.2,0H2.128A2.112,2.112,0,0,0,.018,2.11V21.892A2.112,2.112,0,0,0,2.128,24H16.191a2.112,2.112,0,0,0,2.11-2.11V15.64l5.1-5.1A2.108,2.108,0,0,0,23.4,7.553ZM14.082,1.406a.767.767,0,0,1,.618.206L16.688,3.6a.767.767,0,0,1,.206.618H14.082Zm2.813,20.486a.7.7,0,0,1-.7.7H2.128a.7.7,0,0,1-.7-.7V2.11a.7.7,0,0,1,.7-.7H12.675V4.922a.7.7,0,0,0,.7.7h3.516v5.453L14.82,13.155l-.994.994a.7.7,0,0,0-.17.275l-.994,2.983a.7.7,0,0,0,.889.889l2.983-.994a.7.7,0,0,0,.275-.17l.085-.085v4.845Zm-1.577-7.246.994.994-.38.38-1.492.5.5-1.492Zm1.989,0-.994-.994,3.38-3.383.994.994Zm5.1-5.1-.725.725-.994-.994.725-.726a.7.7,0,1,1,.994.995Z" transform="translate(-0.018)"/>
+        </g>
+      </g>
+      <g id="Group_17781" data-name="Group 17781" transform="translate(2.831 7.032)">
+        <g id="Group_17780" data-name="Group 17780">
+          <path id="Path_8632" data-name="Path 8632" d="M70.566,150H60.721a.7.7,0,1,0,0,1.406h9.844a.7.7,0,1,0,0-1.406Z" transform="translate(-60.018 -150)"/>
+        </g>
+      </g>
+      <g id="Group_17783" data-name="Group 17783" transform="translate(2.831 9.844)">
+        <g id="Group_17782" data-name="Group 17782">
+          <path id="Path_8633" data-name="Path 8633" d="M67.753,210H60.721a.7.7,0,1,0,0,1.406h7.032a.7.7,0,0,0,0-1.406Z" transform="translate(-60.018 -210)"/>
+        </g>
+      </g>
+      <g id="Group_17785" data-name="Group 17785" transform="translate(2.831 12.657)">
+        <g id="Group_17784" data-name="Group 17784">
+          <path id="Path_8634" data-name="Path 8634" d="M67.753,270H60.721a.7.7,0,0,0,0,1.406h7.032a.7.7,0,0,0,0-1.406Z" transform="translate(-60.018 -270)"/>
+        </g>
+      </g>
+      <g id="Group_17787" data-name="Group 17787" transform="translate(2.831 15.47)">
+        <g id="Group_17786" data-name="Group 17786">
+          <path id="Path_8635" data-name="Path 8635" d="M67.753,330H60.721a.7.7,0,1,0,0,1.406h7.032a.7.7,0,1,0,0-1.406Z" transform="translate(-60.018 -330)"/>
+        </g>
+      </g>
+      <g id="Group_17789" data-name="Group 17789" transform="translate(8.456 19.783)">
+        <g id="Group_17788" data-name="Group 17788">
+          <path id="Path_8636" data-name="Path 8636" d="M184.94,422h-4.219a.7.7,0,1,0,0,1.406h4.219a.7.7,0,1,0,0-1.406Z" transform="translate(-180.018 -422)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
