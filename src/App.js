@@ -1,9 +1,10 @@
-import React, { Component } from "react";
-import "./App.css";
-import NavBar from "./component/navbar/index";
-import HomePage from "./pages/home/index";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import NavBar from "./component/navbar/index";
 import Footer from "./component/footer";
+import HomePage from "./pages/home/index";
+import Compounds from "./pages/compounds/index";
+import "./App.css";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage/>} />
+        <Route path="/compounds" element={<Compounds/>} />
       </Routes>
       <Footer />
     </Router>

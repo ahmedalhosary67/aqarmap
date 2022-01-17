@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import {
-  Button,
-  Card,
   Col,
   Container,
   ListGroup,
-  ListGroupItem,
   Navbar,
   Row,
 } from "react-bootstrap";
@@ -22,14 +19,14 @@ class Footer extends Component {
                 <div className="d-flex justify-content-between mb-5">
                   <Navbar.Brand href="/">
                     <img
-                      src="/EnglishLogoWhite.png"
+                      src="./image/EnglishLogoWhite.png"
                       width="170"
                       className="d-inline-block"
                       alt="Aqarmap logo"
                     />
                   </Navbar.Brand>
                   <img
-                    src="/favicon.ico"
+                    src="./favicon.ico"
                     className="d-inline-block"
                     alt="Aqarmap logo"
                   />
@@ -64,21 +61,21 @@ class Footer extends Component {
                 <div className="aqar-app mt-3">
                   <Link to="#google" className="me-2">
                     <img
-                      src="/google.svg"
+                      src="./image/google.svg"
                       className="d-inline-block"
                       alt="google logo"
                     />
                   </Link>
                   <Link to="#IOS" className="me-2">
                     <img
-                      src="/IOS.svg"
+                      src="./image/IOS.svg"
                       className="d-inline-block"
                       alt="IOS logo"
                     />
                   </Link>
                   <Link to="#huawei" className="me-2">
                     <img
-                      src="/huawei.svg"
+                      src="./image/huawei.svg"
                       className="d-inline-block"
                       alt="huawei logo"
                     />
@@ -87,7 +84,7 @@ class Footer extends Component {
                 <div className="socialmedia mt-4">
                   <Link to="#facebook" className="me-5">
                     <img
-                      src="/facebook.svg"
+                      src="./image/facebook.svg"
                       width="10"
                       className="d-inline-block"
                       alt="facebook logo"
@@ -95,7 +92,7 @@ class Footer extends Component {
                   </Link>
                   <Link to="#twitter" className="me-5">
                     <img
-                      src="/twitter.svg"
+                      src="./image/twitter.svg"
                       width="25"
                       className="d-inline-block"
                       alt="twitter logo"
@@ -103,7 +100,7 @@ class Footer extends Component {
                   </Link>
                   <Link to="#instagram-logo" className="me-5">
                     <img
-                      src="/instagram-logo.svg"
+                      src="./image/instagram-logo.svg"
                       width="20"
                       className="d-inline-block"
                       alt="instagram-logo logo"
@@ -111,7 +108,7 @@ class Footer extends Component {
                   </Link>
                   <Link to="#youtube" className="me-5">
                     <img
-                      src="/youtube.svg"
+                      src="./image/youtube.svg"
                       width="25"
                       className="d-inline-block"
                       alt="youtube logo"
