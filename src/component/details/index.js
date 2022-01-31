@@ -2,7 +2,8 @@ import { Badge, Card } from "antd";
 import React, { Component } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "antd/dist/antd.css";
-import { Link, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
+import { Link } from 'react-router-dom';
 
 class Details extends Component {
   render() {
@@ -16,7 +17,7 @@ class Details extends Component {
           <Row className="my-5">
             <h4>SEARCH</h4>
             <Col>
-              <Link variant="" href="#contained-buttons">
+              <Link variant="" to="#contained-buttons">
                 <Card.Grid style={gridStyle}>
                   <Stack direction="row" spacing={2}>
                     <img alt="icon" src="./image/ic_listing.svg" />
@@ -29,7 +30,7 @@ class Details extends Component {
               </Link>
             </Col>
             <Col>
-              <Link variant="" href="#Compounds">
+              <Link variant="" to="./compounds">
                 <Card.Grid style={gridStyle}>
                   <Stack direction="row" spacing={2}>
                     <img alt="icon" src="./image/ic_compounds.svg" />
@@ -52,7 +53,7 @@ class Details extends Component {
               </Link>
             </Col>
             <Col>
-              <Link variant="" href="#OnlineExpos">
+              <Link variant="" to="#OnlineExpos">
                 <Card.Grid style={gridStyle}>
                   <Stack direction="row" spacing={2}>
                     <img alt="icon" src="./image/ic_expo.svg" />
@@ -79,7 +80,7 @@ class Details extends Component {
           <Row className="my-5" gap="3">
             <h4>KNOW</h4>
             <Col className="mb-4" md="4">
-              <Link variant="" href="#OnlineExpos">
+              <Link variant="" to="#OnlineExpos">
                 <Card.Grid style={gridStyle}>
                   <Stack direction="row" spacing={2}>
                     <img alt="icon" src="./image/ic_evaluate_property.svg" />
@@ -92,7 +93,7 @@ class Details extends Component {
               </Link>
             </Col>
             <Col className="mb-4" md="4">
-              <Link variant="" href="#OnlineExpos">
+              <Link variant="" to="#OnlineExpos">
                 <Card.Grid style={gridStyle}>
                   <Stack direction="row" spacing={2}>
                     <img alt="icon" src="./image/ic_money.svg" />
@@ -105,7 +106,7 @@ class Details extends Component {
               </Link>
             </Col>
             <Col className="mb-4" md="4">
-              <Link variant="" href="#OnlineExpos">
+              <Link variant="" to="#OnlineExpos">
                 <Card.Grid style={gridStyle}>
                   <Stack direction="row" spacing={2}>
                     <img alt="icon" src="./image/ic_ask_neighbors.svg" />
@@ -118,7 +119,7 @@ class Details extends Component {
               </Link>
             </Col>
             <Col className="mb-4" md="4">
-              <Link variant="" href="#OnlineExpos">
+              <Link variant="" to="#OnlineExpos">
                 <Card.Grid style={gridStyle}>
                   <Stack direction="row" spacing={2}>
                     <img alt="icon" src="./image/ic_agent.svg" />
@@ -131,7 +132,7 @@ class Details extends Component {
               </Link>
             </Col>
             <Col className="mb-4" md="4">
-              <Link variant="" href="#OnlineExpos">
+              <Link variant="" to="#OnlineExpos">
                 <Card.Grid style={gridStyle}>
                   <Stack direction="row" spacing={2}>
                     <img alt="icon" src="./image/ic_index.svg" />
@@ -144,7 +145,7 @@ class Details extends Component {
               </Link>
             </Col>
             <Col className="mb-4" md="4">
-              <Link variant="" href="#OnlineExpos">
+              <Link variant="" to="#OnlineExpos">
                 <Card.Grid style={gridStyle}>
                   <Stack direction="row" spacing={2}>
                     <img alt="icon" src="./image/ic_idea.svg" />
@@ -157,7 +158,7 @@ class Details extends Component {
               </Link>
             </Col>
             <Col className="mb-4" md="4">
-              <Link variant="" href="#OnlineExpos">
+              <Link variant="" to="#OnlineExpos">
                 <Card.Grid style={gridStyle}>
                   <Stack direction="row" spacing={2}>
                     <img alt="icon" src="./image/ic_emblem.svg" />
@@ -174,7 +175,7 @@ class Details extends Component {
           <Row className="my-5">
             <h4>LIST</h4>
             <Col md="4">
-              <Link variant="" href="#OnlineExpos">
+              <Link variant="" to="#OnlineExpos">
                 <Card.Grid style={gridStyle}>
                   <Stack direction="row" spacing={2}>
                     <img alt="icon" src="./image/ic_sell_property.svg" />
@@ -187,7 +188,7 @@ class Details extends Component {
               </Link>
             </Col>
             <Col md="4">
-              <Link variant="" href="#OnlineExpos">
+              <Link variant="" to="#OnlineExpos">
                 <Card.Grid style={gridStyle}>
                   <Stack direction="row" spacing={2}>
                     <img alt="icon" src="./image/ic_Companies_Registration.svg" />

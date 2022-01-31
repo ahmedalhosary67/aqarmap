@@ -36,21 +36,25 @@ class NavBar extends Component {
                   }
                   id="basic-nav-dropdown"
                 >
-                  <NavDropdown.Item className="action" href="#action/3.1">
-                    <img
-                      alt="icon"
-                      className="me-2"
-                      src="./image/ic_listing.svg"
-                    />
-                    <span>Properties</span>
+                  <NavDropdown.Item className="action">
+                    <Link to="./">
+                      <img
+                        alt="icon"
+                        className="me-2"
+                        src="./image/ic_listing.svg"
+                      />
+                      <span>Properties</span>
+                    </Link>
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="./compounds">
-                    <img
-                      alt="icon"
-                      className="me-2"
-                      src="./image/ic_compounds.svg"
-                    />
+                  <NavDropdown.Item>
+                    <Link text="balck" to="./compounds">
+                      <img
+                        alt="icon"
+                        className="me-2"
+                        src="./image/ic_compounds.svg"
+                      />
                     <span>Compounds</span>
+                    </Link>
                   </NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.3">
                     <img
