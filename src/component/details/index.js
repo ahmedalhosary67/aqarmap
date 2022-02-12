@@ -80,7 +80,7 @@ class Details extends Component {
           <Row className="my-5" gap="3">
             <h4>KNOW</h4>
             <Col className="mb-4" md="4">
-              <Link variant="" to="#OnlineExpos">
+              {/* <Link variant="" to="#OnlineExpos"> */}
                 <Card.Grid style={gridStyle}>
                   <Stack direction="row" spacing={2}>
                     <img alt="icon" src="./image/ic_evaluate_property.svg" />
@@ -90,7 +90,7 @@ class Details extends Component {
                     />
                   </Stack>
                 </Card.Grid>
-              </Link>
+              {/* </Link> */}
             </Col>
             <Col className="mb-4" md="4">
               <Link variant="" to="#OnlineExpos">
