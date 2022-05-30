@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-class NavBar extends Component {
-  // state = {  }
-  render() {
+const NavBar = () => {
     return (
       <React.Fragment>
         <Navbar bg="light" expand="lg">
@@ -192,7 +190,6 @@ class NavBar extends Component {
         </Navbar>
       </React.Fragment>
     );
-  }
 }
 
 export default NavBar;
