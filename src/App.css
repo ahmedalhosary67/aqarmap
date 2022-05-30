@@ -26,7 +26,7 @@
 }
 
 .button-cont a {
-    padding: 1.5% 5% !important;
+    padding: 2% 8% !important;
     border-radius: 50rem;
     background-color: #0277bd;
     color: #fff;
@@ -76,6 +76,11 @@
 .NewBadge sup{
     background: #f9a825;
     color: #000;
+}
+.banner{
+    background-image: url("/public/image/websitecover1desktopsmall~1.jpg");
+    background-size: cover;
+    padding: 100px 0;
 }
 
 @media screen and (max-width: 768px) {

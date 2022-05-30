@@ -4,6 +4,7 @@ import NavBar from "./component/navbar/index";
 import Footer from "./component/footer";
 import HomePage from "./pages/home/index";
 import Compounds from "./pages/compounds/index";
+import Properties from "./pages/properties/index";
 import "./App.css";
 
 
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/compounds" element={<Compounds/>} />
+        <Route path="/properties" element={<Properties/>} />
       </Routes>
       <Footer />
     </Router>
