@@ -22,15 +22,127 @@ const Properies = () => {
             <Button variant="outline-success">Search</Button>
           </Form>
           <h4 className="titleOfFilter">
-            <ArrowRightIcon color="warning" fontSize="large" /> Properties For
-            sale
+            <ArrowRightIcon color="warning" fontSize="large" />
+            Properties For sale
           </h4>
           <samll>
+          <ArrowRightIcon color="warning" fontSize="large" style={{visibility: "hidden"}}/>
             Best properties For sale in , compare with prices and photos between{" "}
             <span className="counter">211,224</span> properties of different
             areas. Search in using the map and contact the seller directly.
           </samll>
           <br />
+          <br />
+          <Card
+            style={{
+              width: 300,
+            }}
+            cover={
+              <img
+                alt="example"
+                src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+              />
+            }
+            actions={[
+              <SettingsOutlined key="setting" />,
+              <EditOutlined key="edit" />,
+              // <EllipsisOutlined key="ellipsis" />,
+            ]}
+          >
+            <Meta
+              avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+              title="Card title"
+              description="This is the description"
+            />
+          </Card>
+          <Card
+            style={{
+              width: 300,
+            }}
+            cover={
+              <img
+                alt="example"
+                src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+              />
+            }
+            actions={[
+              <SettingsOutlined key="setting" />,
+              <EditOutlined key="edit" />,
+              // <EllipsisOutlined key="ellipsis" />,
+            ]}
+          >
+            <Meta
+              avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+              title="Card title"
+              description="This is the description"
+            />
+          </Card>
+          <Card
+            style={{
+              width: 300,
+            }}
+            cover={
+              <img
+                alt="example"
+                src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+              />
+            }
+            actions={[
+              <SettingsOutlined key="setting" />,
+              <EditOutlined key="edit" />,
+              // <EllipsisOutlined key="ellipsis" />,
+            ]}
+          >
+            <Meta
+              avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+              title="Card title"
+              description="This is the description"
+            />
+          </Card>
+          <Card
+            style={{
+              width: 300,
+            }}
+            cover={
+              <img
+                alt="example"
+                src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+              />
+            }
+            actions={[
+              <SettingsOutlined key="setting" />,
+              <EditOutlined key="edit" />,
+              // <EllipsisOutlined key="ellipsis" />,
+            ]}
+          >
+            <Meta
+              avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+              title="Card title"
+              description="This is the description"
+            />
+          </Card>
+          <Card
+            style={{
+              width: 300,
+            }}
+            cover={
+              <img
+                alt="example"
+                src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+              />
+            }
+            actions={[
+              <SettingsOutlined key="setting" />,
+              <EditOutlined key="edit" />,
+              // <EllipsisOutlined key="ellipsis" />,
+            ]}
+          >
+            <Meta
+              avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+              title="Card title"
+              description="This is the description"
+            />
+          </Card>
           <Card
             style={{
               width: 300,

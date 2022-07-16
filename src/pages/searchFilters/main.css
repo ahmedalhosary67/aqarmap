@@ -1,0 +1,36 @@
+.title1 {
+  margin: 30px 0;
+}
+.section2 {
+  border: 2px solid #eee;
+  border-radius: 30px;
+  text-align: center;
+}
+.section2 a {
+  color: initial !important;
+  border: none;
+  border-radius: 20px;
+}
+.section2 a.active {
+  background-color: #e6edf1 !important;
+  color: #0277bd !important;
+  border: none;
+  border-radius: 20px;
+}
+.Property2 {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.Property2 a {
+  color: initial !important;
+  border: 2px solid #eee !important;
+  border-radius: 20px !important;
+}
+.Property2 a.active {
+  background-color: #e6edf1 !important;
+  color: #0277bd !important;
+  border: none;
+  border-radius: 20px;
+}

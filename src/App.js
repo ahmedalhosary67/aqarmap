@@ -5,6 +5,7 @@ import Footer from "./component/footer";
 import HomePage from "./pages/home/index";
 import Compounds from "./pages/compounds/index";
 import Properties from "./pages/properties/index";
+import SearchFilter from "./pages/searchFilters";
 import "./App.css";
 
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<HomePage/>} />
         <Route path="/compounds" element={<Compounds/>} />
         <Route path="/properties" element={<Properties/>} />
+        <Route path="/searchFilter" element={<SearchFilter/>} />
       </Routes>
       <Footer />
     </Router>
