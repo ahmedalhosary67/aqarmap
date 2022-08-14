@@ -1,18 +1,28 @@
-import React, { Component } from "react";
-import { Button, Container, Form, FormControl, Row } from "react-bootstrap";
+import React, { useState } from "react";
+import {
+  Button,
+  Col,
+  Container,
+  Form,
+  FormControl,
+  Row,
+} from "react-bootstrap";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import "./main.css";
-import { Avatar, Card } from "antd";
 import { EditOutlined, SettingsOutlined } from "@mui/icons-material";
-
-const { Meta } = Card;
+import { Avatar, Card } from "antd";
+import Sider from "antd/lib/layout/Sider";
+import CardD from "../../component/card/index";
+import "./main.css";
+import data from "../../services/data.json";
 
 const Properies = () => {
+  const [cards, setCards] = useState(data);
+
   return (
     <>
       <Container>
         <Row>
-          <Form className="d-flex">
+          <Form className="d-flex mt-4">
             <FormControl
               type="search"
               placeholder="Search"
@@ -21,150 +31,42 @@ const Properies = () => {
             />
             <Button variant="outline-success">Search</Button>
           </Form>
-          <h4 className="titleOfFilter">
-            <ArrowRightIcon color="warning" fontSize="large" />
-            Properties For sale
-          </h4>
-          <samll>
-          <ArrowRightIcon color="warning" fontSize="large" style={{visibility: "hidden"}}/>
-            Best properties For sale in , compare with prices and photos between{" "}
-            <span className="counter">211,224</span> properties of different
-            areas. Search in using the map and contact the seller directly.
-          </samll>
-          <br />
-          <br />
-          <Card
-            style={{
-              width: 300,
-            }}
-            cover={
-              <img
-                alt="example"
-                src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+          <div className="subTitle mb-4">
+            <h2 className="titleOfFilter">
+              <ArrowRightIcon color="warning" fontSize="large" />
+              Properties For sale
+            </h2>
+            <small className="d-flex">
+              <ArrowRightIcon
+                color="warning"
+                fontSize="large"
+                style={{ visibility: "hidden" }}
               />
-            }
-            actions={[
-              <SettingsOutlined key="setting" />,
-              <EditOutlined key="edit" />,
-              // <EllipsisOutlined key="ellipsis" />,
-            ]}
-          >
-            <Meta
-              avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-              title="Card title"
-              description="This is the description"
-            />
-          </Card>
-          <Card
-            style={{
-              width: 300,
-            }}
-            cover={
-              <img
-                alt="example"
-                src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-              />
-            }
-            actions={[
-              <SettingsOutlined key="setting" />,
-              <EditOutlined key="edit" />,
-              // <EllipsisOutlined key="ellipsis" />,
-            ]}
-          >
-            <Meta
-              avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-              title="Card title"
-              description="This is the description"
-            />
-          </Card>
-          <Card
-            style={{
-              width: 300,
-            }}
-            cover={
-              <img
-                alt="example"
-                src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-              />
-            }
-            actions={[
-              <SettingsOutlined key="setting" />,
-              <EditOutlined key="edit" />,
-              // <EllipsisOutlined key="ellipsis" />,
-            ]}
-          >
-            <Meta
-              avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-              title="Card title"
-              description="This is the description"
-            />
-          </Card>
-          <Card
-            style={{
-              width: 300,
-            }}
-            cover={
-              <img
-                alt="example"
-                src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-              />
-            }
-            actions={[
-              <SettingsOutlined key="setting" />,
-              <EditOutlined key="edit" />,
-              // <EllipsisOutlined key="ellipsis" />,
-            ]}
-          >
-            <Meta
-              avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-              title="Card title"
-              description="This is the description"
-            />
-          </Card>
-          <Card
-            style={{
-              width: 300,
-            }}
-            cover={
-              <img
-                alt="example"
-                src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-              />
-            }
-            actions={[
-              <SettingsOutlined key="setting" />,
-              <EditOutlined key="edit" />,
-              // <EllipsisOutlined key="ellipsis" />,
-            ]}
-          >
-            <Meta
-              avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-              title="Card title"
-              description="This is the description"
-            />
-          </Card>
-          <Card
-            style={{
-              width: 300,
-            }}
-            cover={
-              <img
-                alt="example"
-                src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-              />
-            }
-            actions={[
-              <SettingsOutlined key="setting" />,
-              <EditOutlined key="edit" />,
-              // <EllipsisOutlined key="ellipsis" />,
-            ]}
-          >
-            <Meta
-              avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-              title="Card title"
-              description="This is the description"
-            />
-          </Card>
+              <span>
+                Best properties For sale in , compare with prices and photos
+                between <span className="counter">211,224</span> properties of
+                different areas. Search in using the map and contact the seller
+                directly.
+              </span>
+            </small>
+          </div>
+          <Row>
+            <Col sm={8}>
+              <Row>
+                {cards.map(
+                  (card) =>
+                    card.isSale && (
+                      <Col key={card.id} sm={6}>
+                        <CardD cardData={card} />
+                      </Col>
+                    )
+                )}
+              </Row>
+            </Col>
+            <Col sm={4}>
+              <Sider></Sider>
+            </Col>
+          </Row>
         </Row>
       </Container>
     </>
