@@ -5,6 +5,15 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import "./main.css";
 
 function SearchFilter() {
+
+  const moreFilters = () => {
+    const extrafilter = document.querySelectorAll(".extra")
+    extrafilter.forEach(element => {
+      console.log(element);
+      element.classList.toggle("hidden")
+    });
+  }
+
   return (
     <>
       <Container>
@@ -134,7 +143,85 @@ function SearchFilter() {
                   </Form.Select>
                 </Col>
               </Row>
+              <br />
 
+              <Row className="extra">
+                <Form.Label>Area range</Form.Label>
+                <Col>
+                  <Form.Select aria-label="Default select example">
+                    <option>Min area</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </Form.Select>
+                </Col>
+                <Col>
+                  <Form.Select aria-label="Default select example">
+                    <option>Max area</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </Form.Select>
+                </Col>
+              </Row>
+              {/* <br /> */}
+              <div className="extra">
+              <Tab.Container className="extra" defaultActiveKey="101">
+                <Form.Label>Payment Method</Form.Label>
+                <Nav variant="pills" className="Property2">
+                  <Nav.Item>
+                    <Nav.Link eventKey="101" href="#">
+                      All
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="102" href="#">
+                      Cash
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="103" href="#">
+                      Installments
+                    </Nav.Link>
+                  </Nav.Item>
+                </Nav>
+              </Tab.Container>
+              </div>
+              {/* <br /> */}
+              <div className="extra">
+              <Tab.Container className="extra" defaultActiveKey="201">
+                <Form.Label>Listings available for mortgage</Form.Label>
+                <Nav variant="pills" className="Property2">
+                  <Nav.Item>
+                    <Nav.Link eventKey="201" href="#">
+                      All Financing Options
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="202" href="#">
+                      CBE 3% Initiative
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="203" href="#">
+                      CBE 8% Initiative
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="204" href="#">
+                      Commercial Financing
+                    </Nav.Link>
+                  </Nav.Item>
+                </Nav>
+              </Tab.Container>
+              </div>
+              {/* <br /> */}
+
+              <Nav.Link onClick={moreFilters}>
+                More filters
+              </Nav.Link>
+              <br/>
+              
               <Button variant="primary" type="submit">
                 Submit
               </Button>
