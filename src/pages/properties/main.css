@@ -1,5 +1,13 @@
 .titleOfFilter{
     padding-top: 40px;
 }
-.subTitle{
+.avatar{
+    position: absolute;
+    top: 210px;
+    right: 25px;
+    width: 70px;
+    height: 70px;
+}
+*{
+    /* font-size: 18 px; */
 }

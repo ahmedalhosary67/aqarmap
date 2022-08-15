@@ -3,6 +3,7 @@ import { Badge } from "antd";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./main.css";
+import Properies from "../../pages/properties";
 
 const Banner = () => {
   return (
@@ -14,9 +15,9 @@ const Banner = () => {
               <h1 className="banner-text mb-md-5">
                 209,650 Properties <br />
                 For{" "}
-                <Link to="./compounds" className="sale1">
+                <Link to="./properties" state={{type: "sale"}} className="sale1">
                   Sale
-                </Link> & <Link to="./compounds" className="sale1">
+                </Link> & <Link to="./properties" state={{type: "rent"}} className="sale1">
                   Rent
                 </Link>
               </h1>

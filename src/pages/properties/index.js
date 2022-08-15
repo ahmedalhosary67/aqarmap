@@ -12,11 +12,13 @@ import { EditOutlined, SettingsOutlined } from "@mui/icons-material";
 import { Avatar, Card } from "antd";
 import Sider from "antd/lib/layout/Sider";
 import CardD from "../../component/card/index";
-import "./main.css";
 import data from "../../services/data.json";
+import "./main.css";
+import { useLocation } from "react-router-dom";
 
 const Properies = () => {
   const [cards, setCards] = useState(data);
+  const {state} = useLocation();
 
   return (
     <>
@@ -34,7 +36,7 @@ const Properies = () => {
           <div className="subTitle mb-4">
             <h2 className="titleOfFilter">
               <ArrowRightIcon color="warning" fontSize="large" />
-              Properties For sale
+              Properties For <span>{state && state.type}</span>
             </h2>
             <small className="d-flex">
               <ArrowRightIcon
@@ -54,8 +56,13 @@ const Properies = () => {
             <Col sm={8}>
               <Row>
                 {cards.map(
-                  (card) =>
+                  (card) => state.type === "sale" ?
                     card.isSale && (
+                      <Col key={card.id} sm={6}>
+                        <CardD cardData={card} />
+                      </Col>
+                    ):
+                    card.isRent && (
                       <Col key={card.id} sm={6}>
                         <CardD cardData={card} />
                       </Col>

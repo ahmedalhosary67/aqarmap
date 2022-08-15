@@ -4,24 +4,27 @@
     "img": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
     "location": "Ain Sokhna",
     "description": "Chalet 95M for sale in IL Monte Galala - Ain Sokhna",
-    "avatar": "https://joeschmoe.io/api/v1/jerry",
+    "avatar": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
     "isRent": true,
     "isSale": false,
     "priceOfSale": 770000,
     "priceOfRent": 1000,
-    "isProperty": true
+    "isProperty": true,
+    "area": 200,
+    "rooms": 2
   },
   {
     "id": "2",
     "img": "https://www.utep.edu/extendeduniversity/utepconnect/blog/november-2018/is-online-education-as-effective-as-traditional-on-campus-schooling.jpg",
     "location": "بيت الوطن التكميلي, 6 أكتوبر",
     "description": "Apartments For sale in Bait Al Watan Al Takmely",
-    "avatar": "https://joeschmoe.io/api/v1/joe",
+    "avatar": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
     "isRent": true,
     "isSale": true,
     "priceOfSale": 2500000,
     "priceOfRent": 1000,
-    "isProperty": true
+    "isProperty": true,
+    "area": 500
   },
   {
     "id": "3",
@@ -33,7 +36,10 @@
     "isSale": true,
     "priceOfSale": 700000,
     "priceOfRent": 1000,
-    "isProperty": true
+    "isProperty": true,
+    "area": 100,
+    "rooms": 2,
+    "bathrooms": 1
   },
   {
     "id": "4",
@@ -45,6 +51,9 @@
     "isSale": true,
     "priceOfSale": 500000,
     "priceOfRent": 1000,
-    "isProperty": false
+    "isProperty": false,
+    "area": 105,
+    "rooms": 3,
+    "bathrooms": 1
   }
 ]
