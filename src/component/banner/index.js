@@ -22,7 +22,7 @@ const Banner = () => {
                 </Link>
               </h1>
               <div className="button-cont">
-                <Link className="btn py-1 px-2 m-2" to="./properties">
+                <Link className="btn py-1 px-2 m-2" to="./searchFilter">
                   Properties
                 </Link>
                 <Link className="btn py-1 px-2 m-2" to="./compounds">
