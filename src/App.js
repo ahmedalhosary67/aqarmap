@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/compounds" element={<Compounds/>} />
-        <Route path="/properties" element={<Properties/>} />
+        <Route path="/properties/:type" element={<Properties/>} />
         <Route path="/searchFilter" element={<SearchFilter/>} />
       </Routes>
       <Footer />

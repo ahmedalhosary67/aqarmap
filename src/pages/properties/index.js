@@ -14,11 +14,12 @@ import Sider from "antd/lib/layout/Sider";
 import CardD from "../../component/card/index";
 import data from "../../services/data.json";
 import "./main.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 const Properies = () => {
   const [cards, setCards] = useState(data);
   const {state} = useLocation();
+  // const params = useParams()
 
   return (
     <>
@@ -33,7 +34,7 @@ const Properies = () => {
             />
             <Button variant="outline-success">Search</Button>
           </Form>
-          <div className="subTitle mb-4">
+          <Row className="subTitle mb-4">
             <h2 className="titleOfFilter">
               <ArrowRightIcon color="warning" fontSize="large" />
               Properties For <span>{state && state.type}</span>
@@ -51,7 +52,7 @@ const Properies = () => {
                 directly.
               </span>
             </small>
-          </div>
+          </Row>
           <Row>
             <Col sm={8}>
               <Row>

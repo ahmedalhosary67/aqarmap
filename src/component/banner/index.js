@@ -15,9 +15,9 @@ const Banner = () => {
               <h1 className="banner-text mb-md-5">
                 209,650 Properties <br />
                 For{" "}
-                <Link to="./properties" state={{type: "sale"}} className="sale1">
+                <Link to="./properties/Sale" state={{type: "Sale"}} className="sale1">
                   Sale
-                </Link> & <Link to="./properties" state={{type: "rent"}} className="sale1">
+                </Link> & <Link to="./properties/Rent" state={{type: "Rent"}} className="sale1">
                   Rent
                 </Link>
               </h1>
