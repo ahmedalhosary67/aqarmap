@@ -18,8 +18,8 @@ import { useLocation, useParams } from "react-router-dom";
 
 const Properies = () => {
   const [cards, setCards] = useState(data);
-  const {state} = useLocation();
-  // const params = useParams()
+  // const {state} = useLocation();
+  const params = useParams()
 
   return (
     <>
@@ -37,7 +37,7 @@ const Properies = () => {
           <Row className="subTitle mb-4">
             <h2 className="titleOfFilter">
               <ArrowRightIcon color="warning" fontSize="large" />
-              Properties For <span>{state && state.type}</span>
+              Properties For <span>{params.type}</span>
             </h2>
             <small className="d-flex">
               <ArrowRightIcon
@@ -57,7 +57,7 @@ const Properies = () => {
             <Col sm={8}>
               <Row>
                 {cards.map(
-                  (card) => state.type === "sale" ?
+                  (card) => params.type === "sale" ?
                     card.isSale && (
                       <Col key={card.id} sm={6}>
                         <CardD cardData={card} />
