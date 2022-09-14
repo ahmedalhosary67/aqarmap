@@ -1,20 +1,21 @@
 [
   {
-    "id": "1",
+    "_id": "1",
     "img": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
     "location": "Ain Sokhna",
     "description": "Chalet 95M for sale in IL Monte Galala - Ain Sokhna",
     "avatar": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
     "isRent": true,
     "isSale": false,
-    "priceOfSale": 770000,
     "priceOfRent": 1000,
     "isProperty": true,
     "area": 200,
-    "rooms": 2
+    "rooms": 2,
+    "type": "Apartments",
+    "paymentMethod": "Installments"
   },
   {
-    "id": "2",
+    "_id": "2",
     "img": "https://www.utep.edu/extendeduniversity/utepconnect/blog/november-2018/is-online-education-as-effective-as-traditional-on-campus-schooling.jpg",
     "location": "بيت الوطن التكميلي, 6 أكتوبر",
     "description": "Apartments For sale in Bait Al Watan Al Takmely",
@@ -24,10 +25,12 @@
     "priceOfSale": 2500000,
     "priceOfRent": 1000,
     "isProperty": true,
-    "area": 500
+    "area": 500,
+    "type": "Villas",
+    "paymentMethod": "Cash"
   },
   {
-    "id": "3",
+    "_id": "3",
     "img": "https://www.besanttechnologies.com/wp-content/uploads/2019/11/online-training-1.png",
     "location": "Ain Sokhna",
     "description": "Townhouse 155M for sale in IL Monte Galala - Ein Elsokhna",
@@ -35,14 +38,15 @@
     "isRent": false,
     "isSale": true,
     "priceOfSale": 700000,
-    "priceOfRent": 1000,
     "isProperty": true,
     "area": 100,
     "rooms": 2,
-    "bathrooms": 1
+    "bathrooms": 1,
+    "type": "Chalets",
+    "paymentMethod": "Cash"
   },
   {
-    "id": "4",
+    "_id": "4",
     "img": "https://www.besanttechnologies.com/wp-content/uploads/2019/11/online-training-1.png",
     "location": "North Coast",
     "description": "Twin House 200m for sale in D Bay - North Coast",
@@ -50,10 +54,27 @@
     "isRent": false,
     "isSale": true,
     "priceOfSale": 500000,
-    "priceOfRent": 1000,
     "isProperty": false,
     "area": 105,
     "rooms": 3,
-    "bathrooms": 1
+    "bathrooms": 1,
+    "type": "Apartments",
+    "paymentMethod": "Cash"
+  },
+  {
+    "_id": "5",
+    "img": "https://www.besanttechnologies.com/wp-content/uploads/2019/11/online-training-1.png",
+    "location": "North Coast",
+    "description": "Twin House 200m for sale in D Bay - North Coast",
+    "avatar": "https://joeschmoe.io/api/v1/jess",
+    "isRent": false,
+    "isSale": true,
+    "priceOfSale": 500000,
+    "isProperty": false,
+    "area": 105,
+    "rooms": 3,
+    "bathrooms": 1,
+    "type": "Apartments",
+    "paymentMethod": "Cash"
   }
 ]

@@ -1,13 +1,31 @@
-import React from 'react'
+import React, { useState } from "react";
 import { Col, Container, InputGroup, Nav, Row, Tab } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import "./main.css";
+import { Select, Tabs } from "antd";
+import data from "../../services/data.json";
+
+const { Option } = Select;
+const sections = ["isRent", "isSale"]
 
 function SearchFilter() {
-  const [state, useState] = React.useState();
-  
+  const [state, setState] = React.useState([]);
+  const [section, setSection] = React.useState();
+
+  const handleChange = (e) => {
+    console.log(`Selected: ${e.target}`);
+  };
+
+  const handleSectionChange = (e) => {
+    setSection(e.target.value);
+    const clone = [...state];
+    clone[e.target.name] = e.target.value;
+    setState(clone);
+    console.log(clone);
+  };
+
   const moreFilters = () => {
     const extrafilter = document.querySelectorAll(".extra");
     extrafilter.forEach((element) => {
@@ -15,10 +33,9 @@ function SearchFilter() {
       element.classList.toggle("hidden");
     });
   };
-
   const handleSubmit = () => {
     console.log("done");
-  }
+  };
 
   return (
     <>
@@ -33,28 +50,39 @@ function SearchFilter() {
                   <InputGroup.Text id="basic-addon1">
                     <LocationOnIcon />
                   </InputGroup.Text>
-                  <Form.Control
-                    placeholder="City or Neighborhood or Street name"
-                    aria-label="Username"
-                    aria-describedby="basic-addon1"
-                  />
+                  <Col>
+                    <Select
+                      mode="multiple"
+                      size={"large"}
+                      placeholder="City or Neighborhood or Street name"
+                      value={state?.location}
+                      name="location"
+                      onChange={handleChange}
+                      style={{ width: "100%" }}
+                    >
+                      {data.map((item) => (
+                        <Option key={item?._id}>{item?.location}</Option>
+                      ))}
+                    </Select>
+                  </Col>
                 </InputGroup>
               </Form.Group>
               <br />
 
-              <Tab.Container defaultActiveKey="first">
+              <Tab.Container defaultActiveKey="isSale">
                 <Form.Label>Section</Form.Label>
+                
                 <Nav variant="pills" className="section2">
                   <Col>
                     <Nav.Item>
-                      <Nav.Link eventKey="first" href="#">
+                      <Nav.Link eventKey="isSale">
                         For sale
                       </Nav.Link>
                     </Nav.Item>
                   </Col>
                   <Col>
                     <Nav.Item>
-                      <Nav.Link eventKey="second" href="#">
+                      <Nav.Link eventKey="isRent">
                         For rent
                       </Nav.Link>
                     </Nav.Item>
@@ -63,66 +91,66 @@ function SearchFilter() {
               </Tab.Container>
               <br />
 
-              <Tab.Container defaultActiveKey="1">
+              <Tab.Container defaultActiveKey="All">
                 <Form.Label>Property Type</Form.Label>
                 <Nav variant="pills" className="Property2">
                   <Nav.Item>
-                    <Nav.Link eventKey="1" href="#">
+                    <Nav.Link eventKey="All">
                       All
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="2" href="#">
+                    <Nav.Link eventKey="Apartments">
                       Apartments
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="3" href="#">
+                    <Nav.Link eventKey="FurnishedApartment">
                       Furnished Apartment
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="4" href="#">
+                    <Nav.Link eventKey="Chalets">
                       Chalets
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="5" href="#">
+                    <Nav.Link eventKey="Villas">
                       Villas
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="6" href="#">
+                    <Nav.Link eventKey="Land">
                       Land
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="7" href="#">
+                    <Nav.Link eventKey="Building">
                       Building
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="8" href="#">
+                    <Nav.Link eventKey="Administrative">
                       Administrative
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="9" href="#">
+                    <Nav.Link eventKey="Commercial">
                       Commercial
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="10" href="#">
+                    <Nav.Link eventKey="Medical">
                       Medical
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="11" href="#">
+                    <Nav.Link eventKey="SharedRoom">
                       Shared Room
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="12" href="#">
+                    <Nav.Link eventKey="Other">
                       Other
                     </Nav.Link>
                   </Nav.Item>
@@ -176,17 +204,17 @@ function SearchFilter() {
                   <Form.Label>Payment Method</Form.Label>
                   <Nav variant="pills" className="Property2">
                     <Nav.Item>
-                      <Nav.Link eventKey="101" href="#">
+                      <Nav.Link eventKey="101">
                         All
                       </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="102" href="#">
+                      <Nav.Link eventKey="102">
                         Cash
                       </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="103" href="#">
+                      <Nav.Link eventKey="103">
                         Installments
                       </Nav.Link>
                     </Nav.Item>
@@ -199,22 +227,22 @@ function SearchFilter() {
                   <Form.Label>Listings available for mortgage</Form.Label>
                   <Nav variant="pills" className="Property2">
                     <Nav.Item>
-                      <Nav.Link eventKey="201" href="#">
+                      <Nav.Link eventKey="201">
                         All Financing Options
                       </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="202" href="#">
+                      <Nav.Link eventKey="202">
                         CBE 3% Initiative
                       </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="203" href="#">
+                      <Nav.Link eventKey="203">
                         CBE 8% Initiative
                       </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="204" href="#">
+                      <Nav.Link eventKey="204">
                         Commercial Financing
                       </Nav.Link>
                     </Nav.Item>
