@@ -5,7 +5,7 @@
     "location": "Ain Sokhna",
     "description": "Chalet 95M for sale in IL Monte Galala - Ain Sokhna",
     "avatar": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-    "isRent": true,
+    "isRent": false,
     "isSale": false,
     "priceOfRent": 1000,
     "isProperty": true,

@@ -1,40 +1,57 @@
-import React, { useState } from "react";
-import { Col, Container, InputGroup, Nav, Row, Tab } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import React, { useContext, useEffect, useState } from "react";
+import {
+  Col,
+  Container,
+  InputGroup,
+  Nav,
+  Row,
+  Tab,
+  Button,
+  Form,
+} from "react-bootstrap";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import "./main.css";
-import { Select, Tabs } from "antd";
-import data from "../../services/data.json";
+import { Select } from "antd";
+import * as FilterData from "../../services/formData";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import SeaMore from "../../component/moreFilters";
+import { Data } from "../../context/context";
 
 const { Option } = Select;
-const sections = ["isRent", "isSale"]
 
 function SearchFilter() {
-  const [state, setState] = React.useState([]);
-  const [section, setSection] = React.useState();
+  const [state, setState] = useState({});
+  const [searchParams, setSearchParams] = useSearchParams([]);
+  const navigate = useNavigate();
+  const [countLocations, setCountLocations] = useState(0);
+  const { data, setData } = useContext(Data);
+  const {
+    propertyType,
+    priceRang,
+    areaRang,
+    paymentMethod,
+    Mortgage,
+    sections,
+    location,
+  } = FilterData;
 
-  const handleChange = (e) => {
-    console.log(`Selected: ${e.target}`);
-  };
+  useEffect(() => {
+    setSearchParams(state);
+  }, [state]);
 
-  const handleSectionChange = (e) => {
-    setSection(e.target.value);
-    const clone = [...state];
-    clone[e.target.name] = e.target.value;
+  const handleChange = (name, e) => {
+    const clone = { ...state };
+    clone[name] = e;
     setState(clone);
-    console.log(clone);
+    searchParams.set(name, e);
+    setSearchParams(searchParams);
+    name === "location" && setCountLocations(e.length);
   };
 
-  const moreFilters = () => {
-    const extrafilter = document.querySelectorAll(".extra");
-    extrafilter.forEach((element) => {
-      console.log(element);
-      element.classList.toggle("hidden");
-    });
-  };
-  const handleSubmit = () => {
-    console.log("done");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setData(state);
+    navigate("/properties/" + state.section);
   };
 
   return (
@@ -44,116 +61,64 @@ function SearchFilter() {
         <Row>
           <Col md={8}>
             <Form onSubmit={handleSubmit}>
-              <Form.Group className="mb-3" controlId="Localion">
-                <Form.Label>Localtion (0 / 5)</Form.Label>
+              <Form.Group className="mb-3" controlId="Location">
+                <Form.Label>Localtion ({countLocations} / 5)</Form.Label>
                 <InputGroup className="mb-3">
                   <InputGroup.Text id="basic-addon1">
                     <LocationOnIcon />
                   </InputGroup.Text>
                   <Col>
                     <Select
-                      mode="multiple"
+                      mode="tags"
                       size={"large"}
                       placeholder="City or Neighborhood or Street name"
-                      value={state?.location}
                       name="location"
-                      onChange={handleChange}
+                      maxTagCount={5}
+                      disabled={countLocations >= 5}
+                      // onSelect={(option) => option.length >= 5}
+                      onChange={(e) => handleChange("location", e)}
                       style={{ width: "100%" }}
                     >
-                      {data.map((item) => (
-                        <Option key={item?._id}>{item?.location}</Option>
+                      {location.map((item) => (
+                        <Option key={item?.key}>{item?.name}</Option>
                       ))}
                     </Select>
                   </Col>
                 </InputGroup>
               </Form.Group>
               <br />
-
-              <Tab.Container defaultActiveKey="isSale">
+              <Tab.Container
+                onSelect={(e) => handleChange("section", e)}
+                defaultActiveKey={searchParams.get("section") || "sale"}
+              >
                 <Form.Label>Section</Form.Label>
-                
+
                 <Nav variant="pills" className="section2">
                   <Col>
                     <Nav.Item>
-                      <Nav.Link eventKey="isSale">
-                        For sale
-                      </Nav.Link>
+                      <Nav.Link eventKey="sale">For sale</Nav.Link>
                     </Nav.Item>
                   </Col>
                   <Col>
                     <Nav.Item>
-                      <Nav.Link eventKey="isRent">
-                        For rent
-                      </Nav.Link>
+                      <Nav.Link eventKey="rent">For rent</Nav.Link>
                     </Nav.Item>
                   </Col>
                 </Nav>
               </Tab.Container>
               <br />
 
-              <Tab.Container defaultActiveKey="All">
+              <Tab.Container
+                onSelect={(e) => handleChange("type", e)}
+                defaultActiveKey={searchParams.get("type") || "all"}
+              >
                 <Form.Label>Property Type</Form.Label>
                 <Nav variant="pills" className="Property2">
-                  <Nav.Item>
-                    <Nav.Link eventKey="All">
-                      All
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="Apartments">
-                      Apartments
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="FurnishedApartment">
-                      Furnished Apartment
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="Chalets">
-                      Chalets
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="Villas">
-                      Villas
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="Land">
-                      Land
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="Building">
-                      Building
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="Administrative">
-                      Administrative
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="Commercial">
-                      Commercial
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="Medical">
-                      Medical
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="SharedRoom">
-                      Shared Room
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="Other">
-                      Other
-                    </Nav.Link>
-                  </Nav.Item>
+                  {propertyType.map((item) => (
+                    <Nav.Item key={item.key}>
+                      <Nav.Link eventKey={item.key}>{item.name}</Nav.Link>
+                    </Nav.Item>
+                  ))}
                 </Nav>
               </Tab.Container>
               <br />
@@ -161,97 +126,105 @@ function SearchFilter() {
               <Row>
                 <Form.Label>Price range</Form.Label>
                 <Col>
-                  <Form.Select aria-label="Default select example">
-                    <option>Min price</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </Form.Select>
+                  <Select
+                    size={"large"}
+                    placeholder="Min price"
+                    id="minPrice"
+                    name="minPrice"
+                    onChange={(e) => handleChange("minPrice", e)}
+                    style={{ width: "100%" }}
+                  >
+                    {priceRang.map((item, i) => (
+                      <Option key={item}>{item}</Option>
+                    ))}
+                  </Select>
                 </Col>
                 <Col>
-                  <Form.Select aria-label="Default select example">
-                    <option>Max price</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </Form.Select>
+                  <Select
+                    size={"large"}
+                    placeholder="Max price"
+                    name="maxPrice"
+                    onChange={(e) => handleChange("maxPrice", e)}
+                    style={{ width: "100%" }}
+                  >
+                    {priceRang
+                      .filter((item) => item >= state.minPrice)
+                      .map((item, i) => (
+                        <Option key={item}>{item}</Option>
+                      ))}
+                  </Select>
                 </Col>
               </Row>
               <br />
 
-              <Row className="extra hidden">
-                <Form.Label>Area range</Form.Label>
-                <Col>
-                  <Form.Select aria-label="Default select example">
-                    <option>Min area</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </Form.Select>
-                </Col>
-                <Col>
-                  <Form.Select aria-label="Default select example">
-                    <option>Max area</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </Form.Select>
-                </Col>
-              </Row>
-              {/* <br /> */}
-              <div className="extra hidden">
-                <Tab.Container className="extra hidden" defaultActiveKey="101">
-                  <Form.Label>Payment Method</Form.Label>
-                  <Nav variant="pills" className="Property2">
-                    <Nav.Item>
-                      <Nav.Link eventKey="101">
-                        All
-                      </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="102">
-                        Cash
-                      </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="103">
-                        Installments
-                      </Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                </Tab.Container>
+              <div className="extra">
+                <Row className="mb-3">
+                  <Form.Label>Area range</Form.Label>
+                  <Col>
+                    <Select
+                      size={"large"}
+                      placeholder="Min Area"
+                      id="minArea"
+                      name="minArea"
+                      onChange={(e) => handleChange("minArea", e)}
+                      style={{ width: "100%" }}
+                    >
+                      {areaRang.map((item, i) => (
+                        <Option key={item}>{item}</Option>
+                      ))}
+                    </Select>
+                  </Col>
+                  <Col>
+                    <Select
+                      size={"large"}
+                      placeholder="Max Area"
+                      name="maxArea"
+                      onChange={(e) => handleChange("maxArea", e)}
+                      style={{ width: "100%" }}
+                    >
+                      {areaRang
+                        .filter((item) => item >= state.minArea)
+                        .map((item, i) => (
+                          <Option key={item}>{item}</Option>
+                        ))}
+                    </Select>
+                  </Col>
+                </Row>
+                {/* <br /> */}
+                <div className="mb-3">
+                  <Tab.Container
+                    onSelect={(e) => handleChange("payment", e)}
+                    defaultActiveKey={searchParams.get("payment") || "all"}
+                  >
+                    <Form.Label>Payment Method</Form.Label>
+                    <Nav variant="pills" className="Property2">
+                      {paymentMethod.map((item) => (
+                        <Nav.Item key={item.key}>
+                          <Nav.Link eventKey={item.key}>{item.name}</Nav.Link>
+                        </Nav.Item>
+                      ))}
+                    </Nav>
+                  </Tab.Container>
+                </div>
+                {/* <br /> */}
+                <div className="mb-3">
+                  <Tab.Container
+                    onSelect={(e) => handleChange("mortgage", e)}
+                    defaultActiveKey={searchParams.get("mortgage") || "all"}
+                  >
+                    <Form.Label>Listings available for mortgage</Form.Label>
+                    <Nav variant="pills" className="Property2">
+                      {Mortgage.map((item) => (
+                        <Nav.Item key={item.key}>
+                          <Nav.Link eventKey={item.key}>{item.name}</Nav.Link>
+                        </Nav.Item>
+                      ))}
+                    </Nav>
+                  </Tab.Container>
+                </div>
               </div>
-              {/* <br /> */}
-              <div className="extra hidden">
-                <Tab.Container className="extra hidden" defaultActiveKey="201">
-                  <Form.Label>Listings available for mortgage</Form.Label>
-                  <Nav variant="pills" className="Property2">
-                    <Nav.Item>
-                      <Nav.Link eventKey="201">
-                        All Financing Options
-                      </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="202">
-                        CBE 3% Initiative
-                      </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="203">
-                        CBE 8% Initiative
-                      </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="204">
-                        Commercial Financing
-                      </Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                </Tab.Container>
-              </div>
-              {/* <br /> */}
 
-              <Nav.Link onClick={moreFilters}>More filters</Nav.Link>
+              <SeaMore />
               <br />
 
               <Button variant="primary" type="submit">

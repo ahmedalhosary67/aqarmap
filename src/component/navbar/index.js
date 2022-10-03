@@ -8,9 +8,9 @@ const NavBar = () => {
       <Navbar bg="light" expand="lg">
         <Container>
           <Navbar.Brand>
-            <Link to="./">
+            <Link to="/">
               <img
-                src="./image/EnglishLogo.png"
+                src="../image/EnglishLogo.png"
                 width="130"
                 className="d-inline-block"
                 alt="Aqarmap logo"
@@ -26,7 +26,7 @@ const NavBar = () => {
                     <img
                       alt="icon"
                       className="me-2"
-                      src="./image/ic_search.png"
+                      src="../image/ic_search.png"
                       width={22}
                     />
                     <span>SEARCH</span>
@@ -35,31 +35,31 @@ const NavBar = () => {
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="action">
-                  <Link to="./properties" className="btn px-0">
+                  <Link to="/properties" className="btn px-0">
                     <img
                       alt="icon"
                       className="me-2"
-                      src="./image/ic_listing.svg"
+                      src="../image/ic_listing.svg"
                     />
                     <span>Properties</span>
                   </Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <Link to="./compounds" className="btn px-0">
+                  <Link to="/compounds" className="btn px-0">
                     <img
                       alt="icon"
                       className="me-2"
-                      src="./image/ic_compounds.svg"
+                      src="../image/ic_compounds.svg"
                     />
                     <span>Compounds</span>
                   </Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <Link to="./online" className="btn px-0">
+                  <Link to="/online" className="btn px-0">
                     <img
                       alt="icon"
                       className="me-2"
-                      src="./image/ic_expo.svg"
+                      src="../image/ic_expo.svg"
                     />
                     <span>Online Expos</span>
                   </Link>
@@ -71,7 +71,7 @@ const NavBar = () => {
                     <img
                       alt="icon"
                       className="me-2"
-                      src="./image/ic_emblem copy.svg"
+                      src="../image/ic_emblem copy.svg"
                       width={22}
                     />
                     <span>KNOW</span>
@@ -83,39 +83,39 @@ const NavBar = () => {
                   <img
                     alt="icon"
                     className="me-2"
-                    src="./image/ic_evaluate_property.svg"
+                    src="../image/ic_evaluate_property.svg"
                   />
                   <span>Valuations</span>
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
-                  <img alt="icon" className="me-2" src="./image/ic_money.svg" />
+                  <img alt="icon" className="me-2" src="../image/ic_money.svg" />
                   <span>Prices Guide</span>
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">
                   <img
                     alt="icon"
                     className="me-2"
-                    src="./image/ic_ask_neighbors.svg"
+                    src="../image/ic_ask_neighbors.svg"
                   />
                   <span>Ask The Neighbors</span>
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.4">
-                  <img alt="icon" className="me-2" src="./image/ic_agent.svg" />
+                  <img alt="icon" className="me-2" src="../image/ic_agent.svg" />
                   <span>Top Agents</span>
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.5">
-                  <img alt="icon" className="me-2" src="./image/ic_index.svg" />
+                  <img alt="icon" className="me-2" src="../image/ic_index.svg" />
                   <span>Real Estimate Index</span>
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.6">
-                  <img alt="icon" className="me-2" src="./image/ic_idea.svg" />
+                  <img alt="icon" className="me-2" src="../image/ic_idea.svg" />
                   <span>Advice & Tips</span>
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.7">
                   <img
                     alt="icon"
                     className="me-2"
-                    src="./image/ic_emblem.svg"
+                    src="../image/ic_emblem.svg"
                   />
                   <span>Know more.. *</span>
                 </NavDropdown.Item>
@@ -126,7 +126,7 @@ const NavBar = () => {
                     <img
                       alt="icon"
                       className="me-2"
-                      src="./image/ic_sell_property.svg"
+                      src="../image/ic_sell_property.svg"
                       width={22}
                     />
                     <span>LIST</span>
@@ -138,7 +138,7 @@ const NavBar = () => {
                   <img
                     alt="icon"
                     className="me-2"
-                    src="./image/ic_sell_property.svg"
+                    src="../image/ic_sell_property.svg"
                   />
                   <span>List Your Property</span>
                 </NavDropdown.Item>
@@ -146,22 +146,22 @@ const NavBar = () => {
                   <img
                     alt="icon"
                     className="me-2"
-                    src="./image/ic_Companies_Registration.svg"
+                    src="../image/ic_Companies_Registration.svg"
                   />
                   <span>List Company Properties</span>
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
             <NavDropdown
-              title={<img alt="icon" src="./image/egypt.svg" />}
+              title={<img alt="icon" src="../image/egypt.svg" />}
               id="basic-nav-dropdown"
             >
               <NavDropdown.Item href="#action/3.10">
-                <img alt="icon" className="me-2" src="./image/egypt.svg" />
+                <img alt="icon" className="me-2" src="../image/egypt.svg" />
                 <span>Egypt</span>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.11">
-                <img alt="icon" className="me-2" src="./image/Saudi-flag.svg" />
+                <img alt="icon" className="me-2" src="../image/Saudi-flag.svg" />
                 <span>KSA</span>
               </NavDropdown.Item>
             </NavDropdown>

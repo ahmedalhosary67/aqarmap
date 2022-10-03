@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   Button,
   Col,
@@ -8,18 +8,19 @@ import {
   Row,
 } from "react-bootstrap";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import { EditOutlined, SettingsOutlined } from "@mui/icons-material";
-import { Avatar, Card } from "antd";
 import Sider from "antd/lib/layout/Sider";
 import CardD from "../../component/card/index";
-import data from "../../services/data.json";
+import FaceApis from "../../services/data.json";
+import { useParams } from "react-router-dom";
+import { Data } from "../../context/context";
 import "./main.css";
-import { useLocation, useParams } from "react-router-dom";
 
-const Properies = () => {
-  const [cards, setCards] = useState(data);
-  // const {state} = useLocation();
-  const params = useParams()
+export default function Properies() {
+  const [cards, setCards] = useState(FaceApis);
+  const params = useParams();
+  const {data, setData} = useContext(Data)
+
+  console.log(data);
 
   return (
     <>
@@ -56,18 +57,18 @@ const Properies = () => {
           <Row>
             <Col sm={8}>
               <Row>
-                {cards.map(
-                  (card) => params.type === "sale" ?
-                    card.isSale && (
-                      <Col key={card.id} sm={6}>
-                        <CardD cardData={card} />
-                      </Col>
-                    ):
-                    card.isRent && (
-                      <Col key={card.id} sm={6}>
-                        <CardD cardData={card} />
-                      </Col>
-                    )
+                {cards.map((card) =>
+                  params.type === "sale"
+                    ? card.isSale && (
+                        <Col key={card._id} sm={6}>
+                          <CardD cardData={card} />
+                        </Col>
+                      )
+                    : card.isRent && (
+                        <Col key={card._id} sm={6}>
+                          <CardD cardData={card} />
+                        </Col>
+                      )
                 )}
               </Row>
             </Col>
@@ -81,4 +82,3 @@ const Properies = () => {
   );
 };
 
-export default Properies;

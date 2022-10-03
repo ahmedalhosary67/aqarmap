@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./main.css";
 import Properies from "../../pages/properties";
 
-const Banner = () => {
+export default function Banner() {
   return (
     <div>
       <Card className="banner">
@@ -40,4 +40,3 @@ const Banner = () => {
   );
 };
 
-export default Banner;

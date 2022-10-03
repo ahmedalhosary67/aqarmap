@@ -13,7 +13,7 @@ const Footer = () => {
                 <Navbar.Brand>
                   <Link to="/">
                     <img
-                      src="./image/EnglishLogoWhite.png"
+                      src="../image/EnglishLogoWhite.png"
                       width="170"
                       className="d-inline-block"
                       alt="Aqarmap logo"
@@ -21,7 +21,7 @@ const Footer = () => {
                   </Link>
                 </Navbar.Brand>
                 <img
-                  src="./favicon.ico"
+                  src="../favicon.ico"
                   className="d-inline-block"
                   alt="Aqarmap logo"
                 />
@@ -56,21 +56,21 @@ const Footer = () => {
               <div className="aqar-app mt-3">
                 <Link to="#google" className="me-2">
                   <img
-                    src="./image/google.svg"
+                    src="../image/google.svg"
                     className="d-inline-block"
                     alt="google logo"
                   />
                 </Link>
                 <Link to="#IOS" className="me-2">
                   <img
-                    src="./image/IOS.svg"
+                    src="../image/IOS.svg"
                     className="d-inline-block"
                     alt="IOS logo"
                   />
                 </Link>
                 <Link to="#huawei" className="me-2">
                   <img
-                    src="./image/huawei.svg"
+                    src="../image/huawei.svg"
                     className="d-inline-block"
                     alt="huawei logo"
                   />
@@ -79,7 +79,7 @@ const Footer = () => {
               <div className="socialmedia mt-4">
                 <Link to="#facebook" className="me-5">
                   <img
-                    src="./image/facebook.svg"
+                    src="../image/facebook.svg"
                     width="10"
                     className="d-inline-block"
                     alt="facebook logo"
@@ -87,7 +87,7 @@ const Footer = () => {
                 </Link>
                 <Link to="#twitter" className="me-5">
                   <img
-                    src="./image/twitter.svg"
+                    src="../image/twitter.svg"
                     width="25"
                     className="d-inline-block"
                     alt="twitter logo"
@@ -95,7 +95,7 @@ const Footer = () => {
                 </Link>
                 <Link to="#instagram-logo" className="me-5">
                   <img
-                    src="./image/instagram-logo.svg"
+                    src="../image/instagram-logo.svg"
                     width="20"
                     className="d-inline-block"
                     alt="instagram-logo logo"
@@ -103,7 +103,7 @@ const Footer = () => {
                 </Link>
                 <Link to="#youtube" className="me-5">
                   <img
-                    src="./image/youtube.svg"
+                    src="../image/youtube.svg"
                     width="25"
                     className="d-inline-block"
                     alt="youtube logo"
