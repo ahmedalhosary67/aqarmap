@@ -1,21 +1,16 @@
 import React, { useContext, useEffect, useState } from "react";
-import {
-  Col,
-  Container,
-  InputGroup,
-  Nav,
-  Row,
-  Tab,
-  Button,
-  Form,
-} from "react-bootstrap";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { Col, Container, Nav, Row, Tab, Button, Form } from "react-bootstrap";
 import "./main.css";
 import { Select } from "antd";
 import * as FilterData from "../../services/formData";
+import originalFakeData from "../../services/data.json";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import SeaMore from "../../component/moreFilters";
+import LocationSearch from "./locationSearch";
 import { Data } from "../../context/context";
+import SectionFilter from "./sectionFilter";
+import PropertyTypeFilter from "./propertyTypeFilter";
+import SelectTab from "../../component/selectTab";
 
 const { Option } = Select;
 
@@ -25,6 +20,7 @@ function SearchFilter() {
   const navigate = useNavigate();
   const [countLocations, setCountLocations] = useState(0);
   const { data, setData } = useContext(Data);
+  // const { filteredFake, setFilteredFake } = useState({});
   const {
     propertyType,
     priceRang,
@@ -37,16 +33,20 @@ function SearchFilter() {
 
   useEffect(() => {
     setSearchParams(state);
+    // setFilteredFacke(originalFakeData)
   }, [state]);
 
   const handleChange = (name, e) => {
     const clone = { ...state };
     clone[name] = e;
     setState(clone);
-    searchParams.set(name, e);
-    setSearchParams(searchParams);
     name === "location" && setCountLocations(e.length);
+    handleFilterFakeData(name, e);
   };
+
+  function handleFilterFakeData(name, e) {
+    // originalFakeData.map(item=> console.log(item))
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -61,66 +61,26 @@ function SearchFilter() {
         <Row>
           <Col md={8}>
             <Form onSubmit={handleSubmit}>
-              <Form.Group className="mb-3" controlId="Location">
-                <Form.Label>Localtion ({countLocations} / 5)</Form.Label>
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon1">
-                    <LocationOnIcon />
-                  </InputGroup.Text>
-                  <Col>
-                    <Select
-                      mode="tags"
-                      size={"large"}
-                      placeholder="City or Neighborhood or Street name"
-                      name="location"
-                      maxTagCount={5}
-                      disabled={countLocations >= 5}
-                      // onSelect={(option) => option.length >= 5}
-                      onChange={(e) => handleChange("location", e)}
-                      style={{ width: "100%" }}
-                    >
-                      {location.map((item) => (
-                        <Option key={item?.key}>{item?.name}</Option>
-                      ))}
-                    </Select>
-                  </Col>
-                </InputGroup>
-              </Form.Group>
-              <br />
-              <Tab.Container
-                onSelect={(e) => handleChange("section", e)}
-                defaultActiveKey={searchParams.get("section") || "sale"}
-              >
-                <Form.Label>Section</Form.Label>
-
-                <Nav variant="pills" className="section2">
-                  <Col>
-                    <Nav.Item>
-                      <Nav.Link eventKey="sale">For sale</Nav.Link>
-                    </Nav.Item>
-                  </Col>
-                  <Col>
-                    <Nav.Item>
-                      <Nav.Link eventKey="rent">For rent</Nav.Link>
-                    </Nav.Item>
-                  </Col>
-                </Nav>
-              </Tab.Container>
+              <LocationSearch
+                onChange={handleChange}
+                countLocations={countLocations}
+              />
               <br />
 
-              <Tab.Container
-                onSelect={(e) => handleChange("type", e)}
-                defaultActiveKey={searchParams.get("type") || "all"}
-              >
-                <Form.Label>Property Type</Form.Label>
-                <Nav variant="pills" className="Property2">
-                  {propertyType.map((item) => (
-                    <Nav.Item key={item.key}>
-                      <Nav.Link eventKey={item.key}>{item.name}</Nav.Link>
-                    </Nav.Item>
-                  ))}
-                </Nav>
-              </Tab.Container>
+              <SectionFilter
+                onChange={handleChange}
+                searchParams={searchParams}
+              />
+              <br />
+
+              <SelectTab
+                onChange={handleChange}
+                name={"type"}
+                searchParams={searchParams}
+                FilterData={propertyType}
+                Label={"Property Type"}
+              />
+
               <br />
 
               <Row>
@@ -134,8 +94,8 @@ function SearchFilter() {
                     onChange={(e) => handleChange("minPrice", e)}
                     style={{ width: "100%" }}
                   >
-                    {priceRang.map((item, i) => (
-                      <Option key={item}>{item}</Option>
+                    {priceRang.map((item) => (
+                      <Option key={item.key}>{item.value}</Option>
                     ))}
                   </Select>
                 </Col>
@@ -148,9 +108,9 @@ function SearchFilter() {
                     style={{ width: "100%" }}
                   >
                     {priceRang
-                      .filter((item) => item >= state.minPrice)
-                      .map((item, i) => (
-                        <Option key={item}>{item}</Option>
+                      .filter((item) => item.key >= state.minPrice)
+                      .map((item) => (
+                        <Option key={item.key}>{item.value}</Option>
                       ))}
                   </Select>
                 </Col>
@@ -190,38 +150,22 @@ function SearchFilter() {
                     </Select>
                   </Col>
                 </Row>
-                {/* <br /> */}
-                <div className="mb-3">
-                  <Tab.Container
-                    onSelect={(e) => handleChange("payment", e)}
-                    defaultActiveKey={searchParams.get("payment") || "all"}
-                  >
-                    <Form.Label>Payment Method</Form.Label>
-                    <Nav variant="pills" className="Property2">
-                      {paymentMethod.map((item) => (
-                        <Nav.Item key={item.key}>
-                          <Nav.Link eventKey={item.key}>{item.name}</Nav.Link>
-                        </Nav.Item>
-                      ))}
-                    </Nav>
-                  </Tab.Container>
-                </div>
-                {/* <br /> */}
-                <div className="mb-3">
-                  <Tab.Container
-                    onSelect={(e) => handleChange("mortgage", e)}
-                    defaultActiveKey={searchParams.get("mortgage") || "all"}
-                  >
-                    <Form.Label>Listings available for mortgage</Form.Label>
-                    <Nav variant="pills" className="Property2">
-                      {Mortgage.map((item) => (
-                        <Nav.Item key={item.key}>
-                          <Nav.Link eventKey={item.key}>{item.name}</Nav.Link>
-                        </Nav.Item>
-                      ))}
-                    </Nav>
-                  </Tab.Container>
-                </div>
+                <br />
+                <SelectTab
+                  onChange={handleChange}
+                  name={"paymentMethod"}
+                  searchParams={searchParams}
+                  FilterData={paymentMethod}
+                  Label={"Payment Method"}
+                />
+                <br />
+                <SelectTab
+                  onChange={handleChange}
+                  name={"mortgage"}
+                  searchParams={searchParams}
+                  FilterData={Mortgage}
+                  Label={"Listings available for mortgage"}
+                />
               </div>
 
               <SeaMore />

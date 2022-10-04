@@ -29,20 +29,22 @@ export const propertyType = [
 export const paymentMethod = [
   { key: "All", name: "All" },
   { key: "Cash", name: "Cash" },
-  { key: "Installments", name: "Installments" }
+  { key: "Installments", name: "Installments" },
 ];
 export const Mortgage = [
   { key: "All", name: "All Financing Options" },
   { key: "CBE-3%", name: "CBE 3% Initiative" },
   { key: "CBE-8%", name: "CBE 8% Initiative" },
-  { key: "Commercial", name: "Commercial Financing" }
+  { key: "Commercial", name: "Commercial Financing" },
 ];
 
-
 export const priceRang = [];
-for (let i = 100000; i <= 1000000; i += 1000) {
-  priceRang.push(i);
+for (let i = 100000; i <= 1000000; i += 50000) {
+  const commas = i.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+  priceRang.push({ key: i, value: commas });
 }
+
 export const areaRang = [];
 for (let i = 70; i <= 1000; i += 10) {
   areaRang.push(i);

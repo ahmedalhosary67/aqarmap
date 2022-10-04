@@ -15,9 +15,9 @@ export default function Banner() {
               <h1 className="banner-text mb-md-5">
                 209,650 Properties <br />
                 For{" "}
-                <Link to="./properties/Sale" className="sale1">
+                <Link to="./properties/sale" className="sale1">
                   Sale
-                </Link> & <Link to="./properties/Rent" className="sale1">
+                </Link> & <Link to="./properties/rent" className="sale1">
                   Rent
                 </Link>
               </h1>
