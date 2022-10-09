@@ -1,5 +1,7 @@
 import React from "react";
-import { Nav } from "react-bootstrap";
+import { Button } from "antd";
+import { BiSlider } from 'react-icons/bi';
+import './main.css';
 
 export default function SeaMore() {
   const moreFilters = () => {
@@ -12,5 +14,5 @@ export default function SeaMore() {
       }
     });
   };
-  return <Nav.Link onClick={moreFilters}>More filters</Nav.Link>;
+  return <Button className="seeMoreButton" type="link" onClick={moreFilters}><BiSlider /> More filters</Button>;
 }

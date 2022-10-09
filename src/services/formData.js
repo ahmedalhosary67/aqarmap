@@ -47,7 +47,9 @@ for (let i = 100000; i <= 1000000; i += 50000) {
 
 export const areaRang = [];
 for (let i = 70; i <= 1000; i += 10) {
-  areaRang.push(i);
+  const commas = i.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+  areaRang.push({ key: i, value: commas });
 }
 
 export const sections = ["is-rent", "is-sale"];

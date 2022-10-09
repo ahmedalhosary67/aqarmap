@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Col, Container, Nav, Row, Tab, Button, Form } from "react-bootstrap";
+import { Col, Container, Row, Button, Form } from "react-bootstrap";
 import "./main.css";
 import { Select } from "antd";
 import * as FilterData from "../../services/formData";
@@ -8,9 +8,8 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import SeaMore from "../../component/moreFilters";
 import LocationSearch from "./locationSearch";
 import { Data } from "../../context/context";
-import SectionFilter from "./sectionFilter";
-import PropertyTypeFilter from "./propertyTypeFilter";
 import SelectTab from "../../component/selectTab";
+import RangeNumber from "../../component/rangeNumbers";
 
 const { Option } = Select;
 
@@ -20,20 +19,11 @@ function SearchFilter() {
   const navigate = useNavigate();
   const [countLocations, setCountLocations] = useState(0);
   const { data, setData } = useContext(Data);
-  // const { filteredFake, setFilteredFake } = useState({});
-  const {
-    propertyType,
-    priceRang,
-    areaRang,
-    paymentMethod,
-    Mortgage,
-    sections,
-    location,
-  } = FilterData;
+  const { propertyType, priceRang, areaRang, paymentMethod, Mortgage } =
+    FilterData;
 
   useEffect(() => {
     setSearchParams(state);
-    // setFilteredFacke(originalFakeData)
   }, [state]);
 
   const handleChange = (name, e) => {
@@ -41,17 +31,12 @@ function SearchFilter() {
     clone[name] = e;
     setState(clone);
     name === "location" && setCountLocations(e.length);
-    handleFilterFakeData(name, e);
   };
-
-  function handleFilterFakeData(name, e) {
-    // originalFakeData.map(item=> console.log(item))
-  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setData(state);
-    navigate("/properties/" + state.section);
+    navigate("/properties/" + (state.section || "sale"));
   };
 
   return (
@@ -67,9 +52,11 @@ function SearchFilter() {
               />
               <br />
 
-              <SectionFilter
+              <SelectTab
                 onChange={handleChange}
+                name={"section"}
                 searchParams={searchParams}
+                Label={"Section"}
               />
               <br />
 
@@ -83,74 +70,23 @@ function SearchFilter() {
 
               <br />
 
-              <Row>
-                <Form.Label>Price range</Form.Label>
-                <Col>
-                  <Select
-                    size={"large"}
-                    placeholder="Min price"
-                    id="minPrice"
-                    name="minPrice"
-                    onChange={(e) => handleChange("minPrice", e)}
-                    style={{ width: "100%" }}
-                  >
-                    {priceRang.map((item) => (
-                      <Option key={item.key}>{item.value}</Option>
-                    ))}
-                  </Select>
-                </Col>
-                <Col>
-                  <Select
-                    size={"large"}
-                    placeholder="Max price"
-                    name="maxPrice"
-                    onChange={(e) => handleChange("maxPrice", e)}
-                    style={{ width: "100%" }}
-                  >
-                    {priceRang
-                      .filter((item) => item.key >= state.minPrice)
-                      .map((item) => (
-                        <Option key={item.key}>{item.value}</Option>
-                      ))}
-                  </Select>
-                </Col>
-              </Row>
-              <br />
+              <RangeNumber
+                onChange={handleChange}
+                minValue={state.minPrice}
+                name={"Price"}
+                FilterData={priceRang}
+              />
 
               <div className="extra">
-                <Row className="mb-3">
-                  <Form.Label>Area range</Form.Label>
-                  <Col>
-                    <Select
-                      size={"large"}
-                      placeholder="Min Area"
-                      id="minArea"
-                      name="minArea"
-                      onChange={(e) => handleChange("minArea", e)}
-                      style={{ width: "100%" }}
-                    >
-                      {areaRang.map((item, i) => (
-                        <Option key={item}>{item}</Option>
-                      ))}
-                    </Select>
-                  </Col>
-                  <Col>
-                    <Select
-                      size={"large"}
-                      placeholder="Max Area"
-                      name="maxArea"
-                      onChange={(e) => handleChange("maxArea", e)}
-                      style={{ width: "100%" }}
-                    >
-                      {areaRang
-                        .filter((item) => item >= state.minArea)
-                        .map((item, i) => (
-                          <Option key={item}>{item}</Option>
-                        ))}
-                    </Select>
-                  </Col>
-                </Row>
                 <br />
+                <RangeNumber
+                  onChange={handleChange}
+                  minValue={state.minArea}
+                  name={"Area"}
+                  FilterData={areaRang}
+                />
+                <br />
+
                 <SelectTab
                   onChange={handleChange}
                   name={"paymentMethod"}
@@ -169,7 +105,6 @@ function SearchFilter() {
               </div>
 
               <SeaMore />
-              <br />
 
               <Button variant="primary" type="submit">
                 Submit
