@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Col, Container, Row, Button, Form } from "react-bootstrap";
 import "./main.css";
-import { Select } from "antd";
+// import { Select } from "antd";
 import * as FilterData from "../../services/formData";
-import originalFakeData from "../../services/data.json";
+// import originalFakeData from "../../services/data.json";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import SeaMore from "../../component/moreFilters";
 import LocationSearch from "./locationSearch";
@@ -11,7 +11,7 @@ import { Data } from "../../context/context";
 import SelectTab from "../../component/selectTab";
 import RangeNumber from "../../component/rangeNumbers";
 
-const { Option } = Select;
+// const { Option } = Select;
 
 function SearchFilter() {
   const [state, setState] = useState({});
@@ -23,7 +23,7 @@ function SearchFilter() {
     FilterData;
 
   useEffect(() => {
-    setSearchParams(state);
+    setSearchParams(data);
   }, [state]);
 
   const handleChange = (name, e) => {

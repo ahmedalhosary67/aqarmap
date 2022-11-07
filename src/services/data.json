@@ -85,5 +85,80 @@
     "bathrooms": 1,
     "type": "apartments",
     "paymentMethod": "Cash"
+  },
+  {
+    "_id": "6",
+    "img": "https://fakeimg.pl/350x200/?text=New-Cairo",
+    "location": {
+      "name": "New Cairo",
+      "key": "newCairo"
+    },
+    "description": "Apartments  For sale in Abd El-Salam Aref St",
+    "avatar": "https://joeschmoe.io/api/v1/jess",
+    "section": "sale",
+    "price": 800000,
+    "property": false,
+    "area": 215,
+    "rooms": 4,
+    "bathrooms": 2,
+    "type": "apartments",
+    "paymentMethod": "Installments"
+  },
+  {
+    "_id": "7",
+    "img": "https://fakeimg.pl/350x200/?text=Porto-ElSokhna",
+    "location": {
+      "name": "Jebal El Sokhna - Porto El Sokhna",
+      "key": "PortoElSokhna"
+    },
+    "description": "Twin House 200m for sale in D Bay - North Coast",
+    "avatar": "https://joeschmoe.io/api/v1/jess",
+    "section": "rent",
+    "price": 1000,
+    "property": false,
+    "area": 105,
+    "rooms": 3,
+    "bathrooms": 1,
+    "type": "apartments",
+    "paymentMethod": "Cash"
+  },
+  {
+    "_id": "8",
+    "img": "https://fakeimg.pl/350x200/?text=Porto-ElSokhna",
+    "location": {
+      "name": "Jebal El Sokhna - Porto El Sokhna",
+      "key": "PortoElSokhna"
+    },
+    "description": "Twin House 200m for sale in D Bay - North Coast",
+    "avatar": "https://joeschmoe.io/api/v1/jess",
+    "section": "sale",
+    "price": 650000,
+    "property": false,
+    "area": 200,
+    "rooms": 3,
+    "type": "villas",
+    "paymentMethod": "Cash"
+  },
+  {
+    "_id": "9",
+    "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+    "location": {
+      "name": "New Cairo",
+      "key": "newCairo"
+    },
+    "description": "Twin House 200m for sale in D Bay - North Coast",
+    "avatar": "https://joeschmoe.io/api/v1/jess",
+    "section": "rent",
+    "price": 12000,
+    "property": false,
+    "area": 559,
+    "rooms": 6,
+    "Floor": 14,
+    "bathrooms": 1,
+    "FinishType": "EXTRA_SUPER_LUX",
+    "type": "chalets",
+    "paymentMethod": "Installments"
   }
 ]
+
+

@@ -2,3 +2,14 @@
     text-decoration: none !important;
     color: inherit;
 }
+.banner{
+    background-image: url("/public/image/1.jpg");
+    background-size: cover;
+    padding: 100px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .banner-text{
+        font-size: 20px;
+    }
+}

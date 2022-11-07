@@ -1,21 +1,22 @@
-import React, { Component } from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Container, Nav, Navbar,  NavDropdown } from "react-bootstrap";
+import { Link ,NavLink} from "react-router-dom";
 
 const NavBar = () => {
+  
   return (
     <React.Fragment>
       <Navbar bg="light" expand="lg">
         <Container>
           <Navbar.Brand>
-            <Link to="/">
+            <NavLink to="/">
               <img
                 src="../image/EnglishLogo.png"
                 width="130"
                 className="d-inline-block"
                 alt="Aqarmap logo"
               />
-            </Link>
+            </NavLink>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -35,34 +36,34 @@ const NavBar = () => {
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="action">
-                  <Link to="/properties" className="btn px-0">
+                  <NavLink to="/properties" className="btn px-0">
                     <img
                       alt="icon"
                       className="me-2"
                       src="../image/ic_listing.svg"
                     />
                     <span>Properties</span>
-                  </Link>
+                  </NavLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <Link to="/compounds" className="btn px-0">
+                  <NavLink to="/compounds" className="btn px-0">
                     <img
                       alt="icon"
                       className="me-2"
                       src="../image/ic_compounds.svg"
                     />
                     <span>Compounds</span>
-                  </Link>
+                  </NavLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <Link to="/online" className="btn px-0">
+                  <NavLink to="/online" className="btn px-0">
                     <img
                       alt="icon"
                       className="me-2"
                       src="../image/ic_expo.svg"
                     />
                     <span>Online Expos</span>
-                  </Link>
+                  </NavLink>
                 </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown
@@ -79,7 +80,7 @@ const NavBar = () => {
                 }
                 id="basic-nav-dropdown"
               >
-                <NavDropdown.Item href="#action/3.1">
+                <NavDropdown.Item to="#action/3.1">
                   <img
                     alt="icon"
                     className="me-2"
@@ -87,11 +88,15 @@ const NavBar = () => {
                   />
                   <span>Valuations</span>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  <img alt="icon" className="me-2" src="../image/ic_money.svg" />
+                <NavDropdown.Item to="#action/3.2">
+                  <img
+                    alt="icon"
+                    className="me-2"
+                    src="../image/ic_money.svg"
+                  />
                   <span>Prices Guide</span>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item to="#action/3.3">
                   <img
                     alt="icon"
                     className="me-2"
@@ -99,19 +104,27 @@ const NavBar = () => {
                   />
                   <span>Ask The Neighbors</span>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4">
-                  <img alt="icon" className="me-2" src="../image/ic_agent.svg" />
+                <NavDropdown.Item to="#action/3.4">
+                  <img
+                    alt="icon"
+                    className="me-2"
+                    src="../image/ic_agent.svg"
+                  />
                   <span>Top Agents</span>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.5">
-                  <img alt="icon" className="me-2" src="../image/ic_index.svg" />
+                <NavDropdown.Item to="#action/3.5">
+                  <img
+                    alt="icon"
+                    className="me-2"
+                    src="../image/ic_index.svg"
+                  />
                   <span>Real Estimate Index</span>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.6">
+                <NavDropdown.Item to="#action/3.6">
                   <img alt="icon" className="me-2" src="../image/ic_idea.svg" />
                   <span>Advice & Tips</span>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.7">
+                <NavDropdown.Item to="#action/3.7">
                   <img
                     alt="icon"
                     className="me-2"
@@ -134,7 +147,7 @@ const NavBar = () => {
                 }
                 id="basic-nav-dropdown"
               >
-                <NavDropdown.Item href="#action/3.8">
+                <NavDropdown.Item to="#action/3.8">
                   <img
                     alt="icon"
                     className="me-2"
@@ -142,7 +155,7 @@ const NavBar = () => {
                   />
                   <span>List Your Property</span>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.9">
+                <NavDropdown.Item to="#action/3.9">
                   <img
                     alt="icon"
                     className="me-2"
@@ -156,17 +169,21 @@ const NavBar = () => {
               title={<img alt="icon" src="../image/egypt.svg" />}
               id="basic-nav-dropdown"
             >
-              <NavDropdown.Item href="#action/3.10">
+              <NavDropdown.Item to="#action/3.10">
                 <img alt="icon" className="me-2" src="../image/egypt.svg" />
                 <span>Egypt</span>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.11">
-                <img alt="icon" className="me-2" src="../image/Saudi-flag.svg" />
+              <NavDropdown.Item to="#action/3.11">
+                <img
+                  alt="icon"
+                  className="me-2"
+                  src="../image/Saudi-flag.svg"
+                />
                 <span>KSA</span>
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#lang">عربي</Nav.Link>
-            <Nav.Link href="#help">Help?</Nav.Link>
+            <NavLink to="#lang">عربي</NavLink>
+            <NavLink to="#help">Help?</NavLink>
           </Navbar.Collapse>
         </Container>
       </Navbar>

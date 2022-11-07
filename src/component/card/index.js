@@ -9,10 +9,11 @@ import {
 } from "@mui/icons-material";
 import { Avatar, Card } from "antd";
 import { useNavigate } from "react-router-dom";
+import "./style.css";
 
 const CardD = ({ cardData }) => {
   const {
-    id,
+    _id,
     img,
     avatar,
     price,
@@ -24,7 +25,7 @@ const CardD = ({ cardData }) => {
   } = cardData;
   const navigate = useNavigate();
   const handleOnClick = useCallback(
-    () => navigate("/compounds" + id, { push: true }),
+    () => navigate("/Listing/" + _id, { push: true }),
     [navigate]
   );
   return (
@@ -38,7 +39,7 @@ const CardD = ({ cardData }) => {
         actions={[
           <WhatsApp
             key="whatsApp"
-            context="gggggggggg"
+            context="WhatsApp"
             style={{ color: "green" }}
           />,
           <PhoneOutlined key="phone" style={{ color: "blue" }} />,
@@ -50,24 +51,28 @@ const CardD = ({ cardData }) => {
             {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
             EGP
           </h3>
-          <h5 className="mb-3">{description}</h5>
-          <p>
+          <h5 className="description mb-3">{description}</h5>
+          <div className="mb-3">
             <LocationOnOutlined /> {location.name}
-          </p>
+          </div>
           <div className="d-flex" style={{ gap: 40 }}>
-            <p>
+            <div>
               <Fullscreen /> {area} M<sup>2</sup>
-            </p>
-            {rooms && (
-              <p>
-                <Bed /> {rooms}
-              </p>
-            )}
-            {bathrooms && (
-              <p>
-                <Shower /> {bathrooms}
-              </p>
-            )}
+            </div>
+            <div>
+              {rooms && (
+                <>
+                  <Bed /> {rooms}
+                </>
+              )}
+            </div>
+            <div>
+              {bathrooms && (
+                <>
+                  <Shower /> {bathrooms}
+                </>
+              )}
+            </div>
           </div>
         </div>
       </Card>

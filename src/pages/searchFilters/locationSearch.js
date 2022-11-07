@@ -31,7 +31,7 @@ export default function LocationSearch({onChange, countLocations}) {
               style={{ width: "100%" }}
             >
               {location.map((item) => (
-                <Option key={item?.key}>{item?.name}</Option>
+                <Option key={item.key}>{item.name}</Option>
               ))}
             </Select>
           </Col>

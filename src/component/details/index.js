@@ -5,7 +5,7 @@ import "antd/dist/antd.css";
 import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const Details = () => {
+const Details = ({data}) => {
   const gridStyle = {
     width: "fit-content",
     padding: "10px 20px",
@@ -13,6 +13,7 @@ const Details = () => {
   return (
     <>
       <Container className="details">
+      {data.map((item) => <div key={item.id}>{item.title}</div>)}
         <Row className="my-5">
           <h4>SEARCH</h4>
           <Col>

@@ -77,12 +77,6 @@
     background: #f9a825;
     color: #000;
 }
-.banner{
-    background-image: url("/public/image/websitecover1desktopsmall~1.jpg");
-    background-size: cover;
-    padding: 100px 0;
-}
-
 @media screen and (max-width: 768px) {
     .button-cont button {
         padding: 2% 7%;
@@ -91,8 +85,5 @@
     }
     .NewBadge sup{
         font-size: 10px;
-    }
-    .banner-text{
-        font-size: 20px;
     }
 }
