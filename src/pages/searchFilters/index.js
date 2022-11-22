@@ -19,8 +19,13 @@ function SearchFilter() {
   const navigate = useNavigate();
   const [countLocations, setCountLocations] = useState(0);
   const { data, setData } = useContext(Data);
-  const { propertyType, priceRang, areaRang, paymentMethod, Mortgage } =
-    FilterData;
+  const {
+    propertyType,
+    priceRang,
+    areaRang,
+    paymentMethod,
+    Mortgage,
+  } = FilterData;
 
   useEffect(() => {
     setSearchParams(data);

@@ -1,0 +1,18 @@
+{
+    "help": {
+        "en": "Help?",
+        "ar": "مساعدة؟"
+    },
+    "search": {
+        "en": "SEARCH",
+        "ar": "بحث"
+    },
+    "know": {
+        "en": "KNOW",
+        "ar": "اعرف"
+    },
+    "list": {
+        "en": "LIST",
+        "ar": "قائمة"
+    }
+}

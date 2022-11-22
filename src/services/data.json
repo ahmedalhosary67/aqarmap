@@ -155,7 +155,227 @@
     "rooms": 6,
     "Floor": 14,
     "bathrooms": 1,
-    "FinishType": "EXTRA_SUPER_LUX",
+    "finishType": "EXTRA_SUPER_LUX",
+    "type": "chalets",
+    "paymentMethod": "Installments"
+  },
+  {
+    "_id": "10",
+    "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+    "location": {
+      "name": "New Cairo",
+      "key": "newCairo"
+    },
+    "description": "Twin House 200m for sale in D Bay - North Coast",
+    "avatar": "https://joeschmoe.io/api/v1/jess",
+    "section": "rent",
+    "price": 12000,
+    "property": false,
+    "area": 559,
+    "rooms": 6,
+    "Floor": 14,
+    "bathrooms": 1,
+    "finishType": "EXTRA_SUPER_LUX",
+    "type": "chalets",
+    "paymentMethod": "Installments"
+  },
+  {
+    "_id": "11",
+    "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+    "location": {
+      "name": "New Cairo",
+      "key": "newCairo"
+    },
+    "description": "Twin House 200m for sale in D Bay - North Coast",
+    "avatar": "https://joeschmoe.io/api/v1/jess",
+    "section": "rent",
+    "price": 12000,
+    "property": false,
+    "area": 559,
+    "rooms": 6,
+    "Floor": 14,
+    "bathrooms": 1,
+    "finishType": "EXTRA_SUPER_LUX",
+    "type": "chalets",
+    "paymentMethod": "Installments"
+  },
+  {
+    "_id": "12",
+    "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+    "location": {
+      "name": "New Cairo",
+      "key": "newCairo"
+    },
+    "description": "Twin House 200m for sale in D Bay - North Coast",
+    "avatar": "https://joeschmoe.io/api/v1/jess",
+    "section": "rent",
+    "price": 12000,
+    "property": false,
+    "area": 559,
+    "rooms": 6,
+    "Floor": 14,
+    "bathrooms": 1,
+    "finishType": "EXTRA_SUPER_LUX",
+    "type": "chalets",
+    "paymentMethod": "Installments"
+  },
+  {
+    "_id": "13",
+    "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+    "location": {
+      "name": "New Cairo",
+      "key": "newCairo"
+    },
+    "description": "Twin House 200m for sale in D Bay - North Coast",
+    "avatar": "https://joeschmoe.io/api/v1/jess",
+    "section": "rent",
+    "price": 12000,
+    "property": false,
+    "area": 559,
+    "rooms": 6,
+    "Floor": 14,
+    "bathrooms": 1,
+    "finishType": "EXTRA_SUPER_LUX",
+    "type": "chalets",
+    "paymentMethod": "Installments"
+  },
+  {
+    "_id": "14",
+    "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+    "location": {
+      "name": "New Cairo",
+      "key": "newCairo"
+    },
+    "description": "Twin House 200m for sale in D Bay - North Coast",
+    "avatar": "https://joeschmoe.io/api/v1/jess",
+    "section": "rent",
+    "price": 12000,
+    "property": false,
+    "area": 559,
+    "rooms": 6,
+    "Floor": 14,
+    "bathrooms": 1,
+    "finishType": "EXTRA_SUPER_LUX",
+    "type": "chalets",
+    "paymentMethod": "Installments"
+  },
+  {
+    "_id": "15",
+    "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+    "location": {
+      "name": "New Cairo",
+      "key": "newCairo"
+    },
+    "description": "Twin House 200m for sale in D Bay - North Coast",
+    "avatar": "https://joeschmoe.io/api/v1/jess",
+    "section": "rent",
+    "price": 12000,
+    "property": false,
+    "area": 559,
+    "rooms": 6,
+    "Floor": 14,
+    "bathrooms": 1,
+    "finishType": "EXTRA_SUPER_LUX",
+    "type": "chalets",
+    "paymentMethod": "Installments"
+  },
+  {
+    "_id": "16",
+    "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+    "location": {
+      "name": "New Cairo",
+      "key": "newCairo"
+    },
+    "description": "Twin House 200m for sale in D Bay - North Coast",
+    "avatar": "https://joeschmoe.io/api/v1/jess",
+    "section": "sale",
+    "price": 2000000,
+    "property": false,
+    "area": 559,
+    "rooms": 6,
+    "Floor": 14,
+    "bathrooms": 1,
+    "finishType": "EXTRA_SUPER_LUX",
+    "type": "chalets",
+    "paymentMethod": "Installments"
+  },
+  {
+    "_id": "17",
+    "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+    "location": {
+      "name": "New Cairo",
+      "key": "newCairo"
+    },
+    "description": "Twin House 200m for sale in D Bay - North Coast",
+    "avatar": "https://joeschmoe.io/api/v1/jess",
+    "section": "rent",
+    "price": 12000,
+    "property": false,
+    "area": 559,
+    "rooms": 6,
+    "Floor": 14,
+    "bathrooms": 1,
+    "finishType": "EXTRA_SUPER_LUX",
+    "type": "chalets",
+    "paymentMethod": "Installments"
+  },
+  {
+    "_id": "18",
+    "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+    "location": {
+      "name": "New Cairo",
+      "key": "newCairo"
+    },
+    "description": "Twin House 200m for sale in D Bay - North Coast",
+    "avatar": "https://joeschmoe.io/api/v1/jess",
+    "section": "sale",
+    "price": 12000,
+    "property": false,
+    "area": 559,
+    "rooms": 6,
+    "Floor": 14,
+    "bathrooms": 1,
+    "finishType": "EXTRA_SUPER_LUX",
+    "type": "chalets",
+    "paymentMethod": "Installments"
+  },
+  {
+    "_id": "19",
+    "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+    "location": {
+      "name": "New Cairo",
+      "key": "newCairo"
+    },
+    "description": "Twin House 200m for sale in D Bay - North Coast",
+    "avatar": "https://joeschmoe.io/api/v1/jess",
+    "section": "rent",
+    "price": 12000,
+    "property": false,
+    "area": 559,
+    "rooms": 6,
+    "Floor": 14,
+    "bathrooms": 1,
+    "finishType": "EXTRA_SUPER_LUX",
+    "type": "chalets",
+    "paymentMethod": "Installments"
+  },
+  {
+    "_id": "20",
+    "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+    "location": {
+      "name": "New Cairo",
+      "key": "newCairo"
+    },
+    "description": "Twin House 200m for sale in D Bay - North Coast",
+    "avatar": "https://joeschmoe.io/api/v1/jess",
+    "section": "sale",
+    "price": 12000,
+    "property": false,
+    "area": 559,
+    "rooms": 6,
+    "Floor": 14,
+    "bathrooms": 1,
+    "finishType": "EXTRA_SUPER_LUX",
     "type": "chalets",
     "paymentMethod": "Installments"
   }

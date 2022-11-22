@@ -1,26 +1,29 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import Banner from "../../component/banner/index";
+import { Data } from "../../context/context";
 import Details from "./../../component/details/index";
 
 const HomePage = () => {
-  const [ state, setState ] = React.useState([]);
+  const { setData } = useContext(Data);
   useEffect(() => {
     init();
   }, []);
-   const init = async () => {
-    const { data } = await axios.get(
-      "https://jsonplaceholder.typicode.com/todos"
-    );
-    setState(data)
-    console.log(data);
-  }
+  const init = async () => {
+    await axios
+      .get("https://jsonplaceholder.typicode.com/todos")
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch(() => {
+        console.log("no");
+      });
+  };
 
   return (
     <div>
-      {/* {state.map((item) => <div key={item.id}>{item.title}</div>)} */}
       <Banner />
-      <Details data={state} />
+      <Details />
     </div>
   );
 };

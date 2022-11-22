@@ -87,3 +87,11 @@
         font-size: 10px;
     }
 }
+
+.rtl{
+    direction: rtl !important;
+}
+
+.ant-card-grid{
+    /* float: initial; */
+}

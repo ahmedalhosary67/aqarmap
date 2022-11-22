@@ -1,9 +1,12 @@
 import React from "react";
-import { Container, Nav, Navbar,  NavDropdown } from "react-bootstrap";
-import { Link ,NavLink} from "react-router-dom";
+import { useContext } from "react";
+import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom";
+import { Lang, trans, transApi } from "../../context/lang";
+import { Know, List, Search } from "../../services/HomeDetails";
 
 const NavBar = () => {
-  
+  const { lang, setLang } = useContext(Lang);
   return (
     <React.Fragment>
       <Navbar bg="light" expand="lg">
@@ -30,41 +33,19 @@ const NavBar = () => {
                       src="../image/ic_search.png"
                       width={22}
                     />
-                    <span>SEARCH</span>
+                    <span>{trans("Search")}</span>
                   </>
                 }
                 id="basic-nav-dropdown"
               >
-                <NavDropdown.Item className="action">
-                  <NavLink to="/properties" className="btn px-0">
-                    <img
-                      alt="icon"
-                      className="me-2"
-                      src="../image/ic_listing.svg"
-                    />
-                    <span>Properties</span>
-                  </NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                  <NavLink to="/compounds" className="btn px-0">
-                    <img
-                      alt="icon"
-                      className="me-2"
-                      src="../image/ic_compounds.svg"
-                    />
-                    <span>Compounds</span>
-                  </NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                  <NavLink to="/online" className="btn px-0">
-                    <img
-                      alt="icon"
-                      className="me-2"
-                      src="../image/ic_expo.svg"
-                    />
-                    <span>Online Expos</span>
-                  </NavLink>
-                </NavDropdown.Item>
+                {Search.map((item) => (
+                  <NavDropdown.Item key={item.link} className="action">
+                    <NavLink to={item.link} className="btn px-0">
+                      <img alt="icon" className="me-2" src={item.imgIcon} />
+                      <span>{transApi(item.title)}</span>
+                    </NavLink>
+                  </NavDropdown.Item>
+                ))}
               </NavDropdown>
               <NavDropdown
                 title={
@@ -75,63 +56,19 @@ const NavBar = () => {
                       src="../image/ic_emblem copy.svg"
                       width={22}
                     />
-                    <span>KNOW</span>
+                    <span>{trans("KNOW")}</span>
                   </>
                 }
                 id="basic-nav-dropdown"
               >
-                <NavDropdown.Item to="#action/3.1">
-                  <img
-                    alt="icon"
-                    className="me-2"
-                    src="../image/ic_evaluate_property.svg"
-                  />
-                  <span>Valuations</span>
-                </NavDropdown.Item>
-                <NavDropdown.Item to="#action/3.2">
-                  <img
-                    alt="icon"
-                    className="me-2"
-                    src="../image/ic_money.svg"
-                  />
-                  <span>Prices Guide</span>
-                </NavDropdown.Item>
-                <NavDropdown.Item to="#action/3.3">
-                  <img
-                    alt="icon"
-                    className="me-2"
-                    src="../image/ic_ask_neighbors.svg"
-                  />
-                  <span>Ask The Neighbors</span>
-                </NavDropdown.Item>
-                <NavDropdown.Item to="#action/3.4">
-                  <img
-                    alt="icon"
-                    className="me-2"
-                    src="../image/ic_agent.svg"
-                  />
-                  <span>Top Agents</span>
-                </NavDropdown.Item>
-                <NavDropdown.Item to="#action/3.5">
-                  <img
-                    alt="icon"
-                    className="me-2"
-                    src="../image/ic_index.svg"
-                  />
-                  <span>Real Estimate Index</span>
-                </NavDropdown.Item>
-                <NavDropdown.Item to="#action/3.6">
-                  <img alt="icon" className="me-2" src="../image/ic_idea.svg" />
-                  <span>Advice & Tips</span>
-                </NavDropdown.Item>
-                <NavDropdown.Item to="#action/3.7">
-                  <img
-                    alt="icon"
-                    className="me-2"
-                    src="../image/ic_emblem.svg"
-                  />
-                  <span>Know more.. *</span>
-                </NavDropdown.Item>
+                {Know.map((item) => (
+                  <NavDropdown.Item key={item.link} className="action">
+                    <NavLink to={item.link} className="btn px-0">
+                      <img alt="icon" className="me-2" src={item.imgIcon} />
+                      <span>{transApi(item.title)}</span>
+                    </NavLink>
+                  </NavDropdown.Item>
+                ))}
               </NavDropdown>
               <NavDropdown
                 title={
@@ -142,27 +79,19 @@ const NavBar = () => {
                       src="../image/ic_sell_property.svg"
                       width={22}
                     />
-                    <span>LIST</span>
+                    <span>{trans("LIST")}</span>
                   </>
                 }
                 id="basic-nav-dropdown"
               >
-                <NavDropdown.Item to="#action/3.8">
-                  <img
-                    alt="icon"
-                    className="me-2"
-                    src="../image/ic_sell_property.svg"
-                  />
-                  <span>List Your Property</span>
-                </NavDropdown.Item>
-                <NavDropdown.Item to="#action/3.9">
-                  <img
-                    alt="icon"
-                    className="me-2"
-                    src="../image/ic_Companies_Registration.svg"
-                  />
-                  <span>List Company Properties</span>
-                </NavDropdown.Item>
+                {List.map((item) => (
+                  <NavDropdown.Item key={item.link} className="action">
+                    <NavLink to={item.link} className="btn px-0">
+                      <img alt="icon" className="me-2" src={item.imgIcon} />
+                      <span>{transApi(item.title)}</span>
+                    </NavLink>
+                  </NavDropdown.Item>
+                ))}
               </NavDropdown>
             </Nav>
             <NavDropdown
@@ -182,8 +111,12 @@ const NavBar = () => {
                 <span>KSA</span>
               </NavDropdown.Item>
             </NavDropdown>
-            <NavLink to="#lang">عربي</NavLink>
-            <NavLink to="#help">Help?</NavLink>
+            <Button
+              onClick={() => (lang === "en" ? setLang("ar") : setLang("en"))}
+            >
+              {lang === "en" ? "عربي" : "English"}
+            </Button>
+            <Button to="#help">{trans("Help")}</Button>
           </Navbar.Collapse>
         </Container>
       </Navbar>
