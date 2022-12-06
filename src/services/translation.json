@@ -14,5 +14,9 @@
     "list": {
         "en": "LIST",
         "ar": "قائمة"
+    },
+    "properties": {
+        "en": "Properties",
+        "ar": "شقة"
     }
 }

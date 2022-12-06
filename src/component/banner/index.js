@@ -1,41 +1,54 @@
 import React from "react";
 import { Badge } from "antd";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import data from "../../services/data.json";
 import "./main.css";
+import { Button, Stack } from "@mui/material";
+import { trans } from "../../context/lang";
 
 export default function Banner() {
-  console.log();
+  const navigate = useNavigate();
   return (
     <div>
       <Card className="banner">
         <Container>
           <Row>
-            <Col>
-              <h1 className="banner-text mb-md-5">
-                <span className="total">{data.length}</span> Properties <br />
-                For{" "}
-                <Link to="properties/sale" className="sale1">
-                  Sale
-                </Link>{" "}
-                &{" "}
-                <Link to="properties/rent" className="sale1">
-                  Rent
-                </Link>
+            <Col xs={12} md={6} xl={5}>
+              <h1 className="mb-5">
+                <Stack direction={"column"} gap={1}>
+                  <Stack direction={"row"} gap={1}>
+                    <span className="total">{data.length}</span>
+                    <span>{trans("Properties")}</span>
+                  </Stack>
+                  <Stack direction={"row"} gap={1}>
+                    For
+                    <span
+                      onClick={() => navigate("properties/sale")}
+                      className="sale1"
+                    >
+                      Sale
+                    </span>
+                    &
+                    <span
+                      onClick={() => navigate("properties/rent")}
+                      className="sale1"
+                    >
+                      Rent
+                    </span>
+                  </Stack>
+                </Stack>
               </h1>
-              <div className="button-cont">
-                <Link className="btn py-1 px-2 m-2" to="searchFilter">
+              <Stack direction={"row"} gap={1} className="button-cont">
+                <Button fullWidth onClick={() => navigate("searchFilter")}>
                   Properties
-                </Link>
-                <Link className="btn py-1 px-2 m-2" to="compounds">
+                </Button>
+                <Button fullWidth onClick={() => navigate("compounds")}>
                   Compound
                   <Badge count="NEW" className="NewBadge" />
-                </Link>
-                {/* </Badge> */}
-              </div>
+                </Button>
+              </Stack>
             </Col>
-            <Col></Col>
           </Row>
         </Container>
       </Card>

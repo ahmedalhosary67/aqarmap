@@ -1,12 +1,15 @@
 import React from "react";
 import { useContext } from "react";
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { Stack } from "@mui/material";
 import { Lang, trans, transApi } from "../../context/lang";
 import { Know, List, Search } from "../../services/HomeDetails";
+import './style.css'
 
 const NavBar = () => {
   const { lang, setLang } = useContext(Lang);
+  const navigate = useNavigate()
   return (
     <React.Fragment>
       <Navbar bg="light" expand="lg">
@@ -29,7 +32,6 @@ const NavBar = () => {
                   <>
                     <img
                       alt="icon"
-                      className="me-2"
                       src="../image/ic_search.png"
                       width={22}
                     />
@@ -39,11 +41,11 @@ const NavBar = () => {
                 id="basic-nav-dropdown"
               >
                 {Search.map((item) => (
-                  <NavDropdown.Item key={item.link} className="action">
-                    <NavLink to={item.link} className="btn px-0">
-                      <img alt="icon" className="me-2" src={item.imgIcon} />
+                  <NavDropdown.Item key={item.link}>
+                    <Stack direction="row" alignItems={"center"} gap={1} onClick={()=> navigate(item.link)}>
+                      <img alt="icon" src={item.imgIcon} />
                       <span>{transApi(item.title)}</span>
-                    </NavLink>
+                    </Stack>
                   </NavDropdown.Item>
                 ))}
               </NavDropdown>
@@ -52,7 +54,6 @@ const NavBar = () => {
                   <>
                     <img
                       alt="icon"
-                      className="me-2"
                       src="../image/ic_emblem copy.svg"
                       width={22}
                     />
@@ -62,11 +63,11 @@ const NavBar = () => {
                 id="basic-nav-dropdown"
               >
                 {Know.map((item) => (
-                  <NavDropdown.Item key={item.link} className="action">
-                    <NavLink to={item.link} className="btn px-0">
-                      <img alt="icon" className="me-2" src={item.imgIcon} />
+                  <NavDropdown.Item key={item.link}>
+                    <Stack direction="row" alignItems={"center"} gap={1} onClick={()=> navigate(item.link)}>
+                      <img alt="icon" src={item.imgIcon} />
                       <span>{transApi(item.title)}</span>
-                    </NavLink>
+                    </Stack>
                   </NavDropdown.Item>
                 ))}
               </NavDropdown>
@@ -75,7 +76,6 @@ const NavBar = () => {
                   <>
                     <img
                       alt="icon"
-                      className="me-2"
                       src="../image/ic_sell_property.svg"
                       width={22}
                     />
@@ -85,11 +85,11 @@ const NavBar = () => {
                 id="basic-nav-dropdown"
               >
                 {List.map((item) => (
-                  <NavDropdown.Item key={item.link} className="action">
-                    <NavLink to={item.link} className="btn px-0">
-                      <img alt="icon" className="me-2" src={item.imgIcon} />
+                  <NavDropdown.Item key={item.link}>
+                    <Stack direction="row" alignItems={"center"} gap={1} onClick={()=> navigate(item.link)}>
+                      <img alt="icon" src={item.imgIcon} />
                       <span>{transApi(item.title)}</span>
-                    </NavLink>
+                    </Stack>
                   </NavDropdown.Item>
                 ))}
               </NavDropdown>
@@ -111,12 +111,12 @@ const NavBar = () => {
                 <span>KSA</span>
               </NavDropdown.Item>
             </NavDropdown>
-            <Button
+            <Button variant="light"
               onClick={() => (lang === "en" ? setLang("ar") : setLang("en"))}
             >
               {lang === "en" ? "عربي" : "English"}
             </Button>
-            <Button to="#help">{trans("Help")}</Button>
+            {/* <Button to="#help">{trans("Help")}</Button> */}
           </Navbar.Collapse>
         </Container>
       </Navbar>

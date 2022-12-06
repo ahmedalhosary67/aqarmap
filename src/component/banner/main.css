@@ -1,15 +1,13 @@
 .sale1{
-    text-decoration: none !important;
-    color: inherit;
+    cursor: pointer;
+    color: initial;
+    transition: all .1s ease-in-out;
+}
+.sale1:hover{
+    color: #0277bd;
 }
 .banner{
     background-image: url("/public/image/1.jpg");
     background-size: cover;
     padding: 100px 0;
-}
-
-@media screen and (max-width: 768px) {
-    .banner-text{
-        font-size: 20px;
-    }
 }

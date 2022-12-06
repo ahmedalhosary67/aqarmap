@@ -9,14 +9,14 @@ const Details = () => {
       <Container className="details">
         <Row className="my-5">
           <h4>SEARCH</h4>
-          {Search.map((item) => (
+          {Search.map(({ link, imgIcon, title, description, newb }) => (
             <AppCard
-              key={item.link}
-              link={item.link}
-              imgIcon={item.imgIcon}
-              title={item.title}
-              description={item.description}
-              newb={item.newb}
+              key={link}
+              link={link}
+              imgIcon={imgIcon}
+              title={title}
+              description={description}
+              newb={newb}
             />
           ))}
         </Row>

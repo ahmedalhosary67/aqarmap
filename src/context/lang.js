@@ -19,14 +19,6 @@ export function trans(name) {
 
 export function transApi(name) {
   const { lang } = useContext(Lang);
-  console.log(name);
-//   const nameLower = name.toLowerCase();
-//   let langChange;
-
-//   name === undefined
-//     ? (langChange = name)
-//     : (langChange =
-        // lang === "en" ? name.en : name.ar);
 
   return lang === "en" ? name.en : name.ar;
 }
