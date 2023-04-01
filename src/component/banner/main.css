@@ -7,7 +7,11 @@
     color: #0277bd;
 }
 .banner{
-    background-image: url("/public/image/1.jpg");
+    background-image: url(/image/1.jpg);
     background-size: cover;
     padding: 100px 0;
+}
+
+.rotateimage{
+    transform:scaleX(-1)
 }

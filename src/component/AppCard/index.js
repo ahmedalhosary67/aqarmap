@@ -9,10 +9,12 @@ import { transApi } from "../../context/lang";
 const AppCard = (props) => {
   const { link, title, imgIcon, newb, description } = props;
   const navigate = useNavigate();
+
   const gridStyle = {
     width: "fit-content",
     padding: "10px 20px"
   };
+  
   return (
     <Col className="mb-4" md="4">
       <Card.Grid style={gridStyle} onClick={() => navigate(link)}>

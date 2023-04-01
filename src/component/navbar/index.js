@@ -5,11 +5,11 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { Stack } from "@mui/material";
 import { Lang, trans, transApi } from "../../context/lang";
 import { Know, List, Search } from "../../services/HomeDetails";
-import './style.css'
+import "./style.css";
 
 const NavBar = () => {
   const { lang, setLang } = useContext(Lang);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <React.Fragment>
       <Navbar bg="light" expand="lg">
@@ -17,7 +17,11 @@ const NavBar = () => {
           <Navbar.Brand>
             <NavLink to="/">
               <img
-                src="../image/EnglishLogo.png"
+                src={
+                  lang === "ar"
+                    ? "/image/logo-ar.svg"
+                    : "/image/EnglishLogo.png"
+                }
                 width="130"
                 className="d-inline-block"
                 alt="Aqarmap logo"
@@ -30,11 +34,7 @@ const NavBar = () => {
               <NavDropdown
                 title={
                   <>
-                    <img
-                      alt="icon"
-                      src="../image/ic_search.png"
-                      width={22}
-                    />
+                    <img alt="icon" src="../image/ic_search.png" width={22} />
                     <span>{trans("Search")}</span>
                   </>
                 }
@@ -42,7 +42,12 @@ const NavBar = () => {
               >
                 {Search.map((item) => (
                   <NavDropdown.Item key={item.link}>
-                    <Stack direction="row" alignItems={"center"} gap={1} onClick={()=> navigate(item.link)}>
+                    <Stack
+                      direction="row"
+                      alignItems={"center"}
+                      gap={1}
+                      onClick={() => navigate(item.link)}
+                    >
                       <img alt="icon" src={item.imgIcon} />
                       <span>{transApi(item.title)}</span>
                     </Stack>
@@ -64,7 +69,12 @@ const NavBar = () => {
               >
                 {Know.map((item) => (
                   <NavDropdown.Item key={item.link}>
-                    <Stack direction="row" alignItems={"center"} gap={1} onClick={()=> navigate(item.link)}>
+                    <Stack
+                      direction="row"
+                      alignItems={"center"}
+                      gap={1}
+                      onClick={() => navigate(item.link)}
+                    >
                       <img alt="icon" src={item.imgIcon} />
                       <span>{transApi(item.title)}</span>
                     </Stack>
@@ -86,7 +96,12 @@ const NavBar = () => {
               >
                 {List.map((item) => (
                   <NavDropdown.Item key={item.link}>
-                    <Stack direction="row" alignItems={"center"} gap={1} onClick={()=> navigate(item.link)}>
+                    <Stack
+                      direction="row"
+                      alignItems={"center"}
+                      gap={1}
+                      onClick={() => navigate(item.link)}
+                    >
                       <img alt="icon" src={item.imgIcon} />
                       <span>{transApi(item.title)}</span>
                     </Stack>
@@ -111,7 +126,8 @@ const NavBar = () => {
                 <span>KSA</span>
               </NavDropdown.Item>
             </NavDropdown>
-            <Button variant="light"
+            <Button
+              variant="light"
               onClick={() => (lang === "en" ? setLang("ar") : setLang("en"))}
             >
               {lang === "en" ? "عربي" : "English"}
