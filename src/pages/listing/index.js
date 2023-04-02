@@ -4,11 +4,12 @@ import {
   Container,
   Row,
 } from "react-bootstrap";
-import Sider from "antd/lib/layout/Sider";
+// import Sider from "antd/lib/layout/Sider";
 import { useParams } from "react-router-dom";
 // import FilteredCard from "../../component/filteredCard";
 import "./style.css";
 import ListingSection from "../../component/listingSection";
+import Sider from "../../component/sider";
 
 export default function ListingPage() {
   const params = useParams();

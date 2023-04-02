@@ -5,6 +5,7 @@ import "antd/dist/antd.css";
 import { Stack } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { transApi } from "../../context/lang";
+import "./main.css";
 
 const AppCard = (props) => {
   const { link, title, imgIcon, newb, description } = props;
@@ -12,9 +13,9 @@ const AppCard = (props) => {
 
   const gridStyle = {
     width: "fit-content",
-    padding: "10px 20px"
+    padding: "20px 20px",
   };
-  
+
   return (
     <Col className="mb-4" md="4">
       <Card.Grid style={gridStyle} onClick={() => navigate(link)}>

@@ -19,7 +19,7 @@ const routes = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       {
-        path: "compounds",
+        path: "compounds/:type",
         element: <Compounds />,
       },
       {

@@ -1,0 +1,10 @@
+.titleOfFilter {
+  padding-top: 40px;
+}
+.avatar {
+  position: absolute !important;
+  top: 210px;
+  right: 25px;
+  width: 70px !important;
+  height: 70px !important;
+}

@@ -9,23 +9,17 @@ import { Data } from "../../context/context";
 import SelectTab from "../../component/selectTab";
 import RangeNumber from "../../component/rangeNumbers";
 
-
 function SearchFilter() {
   const [state, setState] = useState({});
   const [searchParams, setSearchParams] = useSearchParams([]);
   const navigate = useNavigate();
   const [countLocations, setCountLocations] = useState(0);
   const { data, setData } = useContext(Data);
-  const {
-    propertyType,
-    priceRang,
-    areaRang,
-    paymentMethod,
-    Mortgage,
-  } = FilterData;
-
+  const { propertyType, priceRang, areaRang, paymentMethod, Mortgage } =
+    FilterData;
+  // console.log(searchParams.get("type"));
   // useEffect(() => {
-    // setSearchParams(data);
+  // setSearchParams(data);
   // }, [state]);
 
   const handleChange = (name, e) => {
@@ -38,7 +32,9 @@ function SearchFilter() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setData(state);
-    navigate("/properties/" + (state.section || "sale"));
+    searchParams.get("type") === "properties"
+      ? navigate("/properties/" + (state.section || "sale"))
+      : navigate("/compounds/" + (state.section || "sale"));
   };
 
   return (

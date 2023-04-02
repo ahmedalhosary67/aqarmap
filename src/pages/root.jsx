@@ -16,7 +16,6 @@ function Root() {
         <Data.Provider value={{ data, setData }}>
           <Outlet />
         </Data.Provider>
-
         <Footer />
       </div>
     </Lang.Provider>

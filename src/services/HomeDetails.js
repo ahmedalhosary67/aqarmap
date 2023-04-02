@@ -1,13 +1,13 @@
 export const Search = [
   {
-    link: "searchFilter",
+    link: "searchFilter?type=properties",
     imgIcon: "./image/ic_listing.svg",
     title: { en: "properties", ar: "شقق" },
     description: "Search for properties for sale & rent",
     newb: false,
   },
   {
-    link: "compounds",
+    link: "searchFilter?type=compounds",
     imgIcon: "./image/ic_compounds.svg",
     title: { en: "Compounds", ar: "تجمعات" },
     description: "Compare all compound features & prices",

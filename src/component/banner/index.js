@@ -41,10 +41,16 @@ export default function Banner() {
               </Stack>
             </h1>
             <Stack direction={"row"} gap={1} className="button-cont">
-              <Button fullWidth onClick={() => navigate("searchFilter")}>
-              {trans("Properties")}
+              <Button
+                fullWidth
+                onClick={() => navigate("searchFilter?type=properties")}
+              >
+                {trans("Properties")}
               </Button>
-              <Button fullWidth onClick={() => navigate("compounds")}>
+              <Button
+                fullWidth
+                onClick={() => navigate("searchFilter?type=compounds")}
+              >
                 {trans("Compounds")}
               </Button>
             </Stack>
