@@ -34,7 +34,7 @@ const CardD = ({ cardData }) => {
   );
   return (
     <>
-      <Skeleton loading={loading} avatar active>
+      <Skeleton loading={loading} avatar active paragraph={{ rows: 4 }}>
         <Card
           className="mb-3"
           cover={

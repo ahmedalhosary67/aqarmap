@@ -76,7 +76,7 @@ export const Know = [
 
 export const List = [
   {
-    link: "#millions",
+    link: "ListOfProperties",
     imgIcon: "./image/ic_sell_property.svg",
     title: { en: "List Your Property", ar: "List Your Property" },
     description: "Reach millions of users directly",

@@ -16,7 +16,7 @@ export default function Banner() {
       <Container className={lang === "en" ? "" : " rotateimage"}>
         <Row>
           <Col xs={12} md={6} xl={5}>
-            <h1 className="mb-5">
+            <h1 className="titleBanner mb-5">
               <Stack direction={"column"} gap={1}>
                 <Stack direction={"row"} gap={1}>
                   <span className="total">{data.length}</span>

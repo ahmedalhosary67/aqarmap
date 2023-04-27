@@ -1,17 +1,24 @@
-.sale1{
-    cursor: pointer;
-    color: initial;
-    transition: all .1s ease-in-out;
+.sale1 {
+  cursor: pointer;
+  color: white;
+  transition: all 0.1s ease-in-out;
 }
-.sale1:hover{
-    color: #0277bd;
+.sale1:hover {
+  color: #0277bd;
 }
-.banner{
-    background-image: url(/image/1.jpg);
-    background-size: cover;
-    padding: 100px 0;
+.banner {
+  background-image: url(/image/2.jpg);
+  background-size: cover;
+  min-height: calc(100vh - 56px);
+  border-radius: 0 !important;
+  justify-content: center;
 }
 
-.rotateimage{
-    transform:scaleX(-1)
+.banner .titleBanner {
+  color: white;
+  text-align: center;
+}
+
+.rotateimage {
+  transform: scaleX(-1);
 }
