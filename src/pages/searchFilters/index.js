@@ -17,10 +17,6 @@ function SearchFilter() {
   const { data, setData } = useContext(Data);
   const { propertyType, priceRang, areaRang, paymentMethod, Mortgage } =
     FilterData;
-  // console.log(searchParams.get("type"));
-  // useEffect(() => {
-  // setSearchParams(data);
-  // }, [state]);
 
   const handleChange = (name, e) => {
     const clone = { ...state };

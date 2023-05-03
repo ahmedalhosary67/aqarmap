@@ -2,13 +2,13 @@ import React from "react";
 import { Col, InputGroup, Form } from "react-bootstrap";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { Select } from "antd";
-import * as FilterData from "../../services/formData";
+import * as FromData from "../../services/formData";
 import "./main.css";
 
 const { Option } = Select;
 
-export default function LocationSearch({onChange, countLocations}) {
-  const { location } = FilterData;
+export default function LocationSearch({ onChange, countLocations }) {
+  const { location } = FromData;
 
   return (
     <>
@@ -40,4 +40,3 @@ export default function LocationSearch({onChange, countLocations}) {
     </>
   );
 }
-

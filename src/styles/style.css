@@ -18,7 +18,7 @@
 }
 
 .button-cont button {
-  padding: 2% ;
+  padding: 2%;
   border-radius: 50rem;
   background-color: #0277bd;
   color: #fff;
@@ -62,8 +62,8 @@
   transform-origin: 100% 0%;
 }
 .NewBadge sup {
-    background: #f9a825;
-    color: #000;
+  background: #f9a825;
+  color: #000;
 }
 /* @media screen and (max-width: 768px) {
     .NewBadge {
@@ -78,4 +78,9 @@
 
 .ant-card-grid {
   float: initial;
+}
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
