@@ -7,13 +7,6 @@ import SelectTab from "../../component/selectTab";
 import AppSelect from "../../component/AppSelect";
 const { Option } = Select;
 
-const tailLayout = {
-  wrapperCol: {
-    offset: 8,
-    span: 16,
-  },
-};
-
 export default function Form3() {
   const onFinish = (values) => {
     console.log(values);
@@ -26,7 +19,7 @@ export default function Form3() {
         label="Price"
         rules={[
           {
-            required: true,
+            // required: true,
           },
         ]}
       >
@@ -37,7 +30,7 @@ export default function Form3() {
         label="Area"
         rules={[
           {
-            required: true,
+            // required: true,
           },
         ]}
       >
@@ -48,7 +41,7 @@ export default function Form3() {
         label="Rooms"
         rules={[
           {
-            required: true,
+            // required: true,
           },
         ]}
       >

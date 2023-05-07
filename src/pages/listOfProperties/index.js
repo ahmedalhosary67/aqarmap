@@ -5,20 +5,20 @@ import { Button, Form } from "antd";
 import Form1 from "./form1";
 import Form2 from "./form2";
 import Form3 from "./form3";
+import { useNavigate } from "react-router-dom";
 
-const tailLayout = {
-  wrapperCol: {
-    offset: 8,
-    span: 16,
-  },
-};
 export default function ListOfProperties() {
+  const navigate = useNavigate();
   const [num, setNum] = React.useState(1);
-  const [data, setData] = React.useState([]);
+  const [data, setData] = React.useState({});
 
-  const onFinish = (values) => {
-    setData([...data, values]);
+  const handleNext = (values, item) => {
+    setData({ ...data, ...values });
     num < 3 && setNum(num + 1);
+  };
+  const onFinish = (values, e) => {
+    setData({ ...data, ...values });
+    navigate("/");
   };
 
   useEffect(() => {
@@ -29,9 +29,13 @@ export default function ListOfProperties() {
     <>
       <Container>
         <br />
-        <h2>List Your Property</h2>
+        <h2>List your property</h2>
         <br />
-        <Form name="control-ref" onFinish={onFinish}>
+        <Form
+          layout="vertical"
+          name="control-ref"
+          onFinish={num < 3 ? handleNext : onFinish}
+        >
           {num === 1 ? (
             <Form1 />
           ) : num == 2 ? (
@@ -39,9 +43,9 @@ export default function ListOfProperties() {
           ) : num == 3 ? (
             <Form3 />
           ) : null}
-          <Form.Item {...tailLayout}>
+          <Form.Item>
             <Button type="primary" htmlType="submit">
-              Next
+              {num < 3 ? "Next" : "Submit"}
             </Button>
           </Form.Item>
         </Form>

@@ -17,7 +17,7 @@ const AppSelect = ({ onChange, name, label, data }) => {
         label={label}
         rules={[
           {
-            required: true,
+            // required: true,
           },
         ]}
       >
@@ -27,8 +27,8 @@ const AppSelect = ({ onChange, name, label, data }) => {
           allowClear
         >
           {data.map((item) => (
-            <Option key={item.value} value={item.value}>
-              {item.label}
+            <Option key={item.key} value={item.key}>
+              {item.name}
             </Option>
           ))}
         </Select>

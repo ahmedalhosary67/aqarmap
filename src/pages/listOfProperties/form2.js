@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import "./style.css";
 import { Button, Cascader, Form, Input, Select } from "antd";
 import SelectTab from "../../component/selectTab";
 import AppSelect from "../../component/AppSelect";
+const { Option } = Select;
 
 const propertyType = [
   {
@@ -86,52 +87,25 @@ const propertyType = [
     ],
   },
 ];
+
 export default function Form2() {
-  const [state, setState] = useState([]);
-  const [area, setArea] = useState(null);
-  const [location, setLocation] = useState(null);
-
-  const onChangeCity = (value) => {
-    propertyType.find((item) => item.value == value).hasOwnProperty("children")
-      ? setArea(propertyType.find((item) => item.value == value).children)
-      : setArea(null);
-    console.log(value);
+  const onChange = (value) => {
+    console.log(value.map((item) => item.label).join(", "));
+    // value.map((item) => item.label).join(", ");
   };
-  const onChangeArea = (value) => {
-    area.find((item) => item.value == value).hasOwnProperty("children")
-      ? setLocation(propertyType.find((item) => item.value == value).children)
-      : setLocation(null);
-    console.log(value);
-  };
-  const onChangeLocation = (value) => {
-    console.log(value);
-  };
-
   return (
     <>
-      <AppSelect
-        onChange={onChangeCity}
-        name="city"
-        label="City"
-        data={propertyType}
-      />
-
-      {area && (
-        <AppSelect
-          onChange={onChangeArea}
-          name="area"
-          label="Area"
-          data={area}
-        />
-      )}
-      {location && (
-        <AppSelect
-          onChange={onChangeLocation}
-          name="location"
-          label="Location"
-          data={area}
-        />
-      )}
+      <Form.Item
+        name="propertyType"
+        label="Property Type"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Cascader options={propertyType} onChange={onChange} />
+      </Form.Item>
     </>
   );
 }

@@ -1,6 +1,12 @@
-.card-listing{
-    border: none ;
+.card-listing {
+  border: none;
 }
-.upperCase{
-    text-transform: capitalize;
+.upperCase {
+  text-transform: capitalize;
+}
+.container {
+  flex: 1;
+}
+.ant-form-item-label > label {
+  font-size: large;
 }
