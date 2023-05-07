@@ -61,6 +61,12 @@ function SearchFilter() {
                 FilterData={propertyType}
                 Label={"Property Type"}
               />
+              <SelectTab
+                onChange={handleChange}
+                name={"type"}
+                searchParams={searchParams}
+                FilterData={propertyType}
+              />
 
               <br />
 
