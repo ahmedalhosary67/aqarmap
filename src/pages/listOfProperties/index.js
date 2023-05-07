@@ -27,7 +27,7 @@ export default function ListOfProperties() {
 
   return (
     <>
-      <Container>
+      <Container className="body">
         <br />
         <h2>List your property</h2>
         <br />

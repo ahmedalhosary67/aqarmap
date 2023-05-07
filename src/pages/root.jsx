@@ -11,7 +11,7 @@ function Root() {
   const [data, setData] = useState([]);
   return (
     <Lang.Provider value={{ lang, setLang }}>
-      <div className={`wrapper ${lang === "en"? "ltr": "rtl"}`}>
+      <div className={`wrapper ${lang === "en" ? "ltr" : "rtl"}`}>
         <NavBar />
         <Data.Provider value={{ data, setData }}>
           <Outlet />

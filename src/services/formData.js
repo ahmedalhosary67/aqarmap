@@ -12,6 +12,10 @@ export const location = [
   { key: "shared-room", name: "Shared Room" },
   { key: "other", name: "Other" },
 ];
+export const listingSection = [
+  { key: "sale", name: "For Sale" },
+  { key: "rent", name: "For Rent" },
+];
 // export const propertyType = [
 //   { key: "all", name: "All" },
 //   { key: "apartments", name: "Apartments" },

@@ -5,7 +5,7 @@ import "./style.css";
 import { Button, Cascader, Form, Input, Select } from "antd";
 import SelectTab from "../../component/selectTab";
 import AppSelect from "../../component/AppSelect";
-import { propertyType } from "../../services/formData";
+import { listingSection, propertyType } from "../../services/formData";
 
 export default function Form1() {
   const [state, setState] = useState([]);
@@ -24,7 +24,7 @@ export default function Form1() {
       : setLocation(null);
     console.log(value);
   };
-  const onChangeLocation = (value) => {
+  const onChange = (value) => {
     console.log(value);
   };
 
@@ -33,7 +33,7 @@ export default function Form1() {
       <Row>
         <Col md={6}>
           <AppSelect
-            onChange={onChangeCity}
+            onChange={onChange}
             name="listingType"
             label="Listing Type"
             data={propertyType}
@@ -41,10 +41,10 @@ export default function Form1() {
         </Col>
         <Col md={6}>
           <AppSelect
-            onChange={onChangeCity}
+            onChange={onChange}
             name="listingSection"
             label="Listing Section"
-            data={propertyType}
+            data={listingSection}
           />
         </Col>
         <Col md={6}>
@@ -67,7 +67,7 @@ export default function Form1() {
       )}
       {location && (
         <AppSelect
-          onChange={onChangeLocation}
+          onChange={onChange}
           name="location"
           label="Location"
           data={area}

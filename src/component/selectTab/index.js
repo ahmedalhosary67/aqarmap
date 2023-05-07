@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, Tab, Nav, Col } from "react-bootstrap";
+import { listingSection } from "../../services/formData";
 
 export default function SelectTab({
   onChange,
@@ -18,16 +19,18 @@ export default function SelectTab({
           <Form.Label>Section</Form.Label>
 
           <Nav variant="pills" className="section2">
-            <Col>
-              <Nav.Item>
-                <Nav.Link eventKey="sale">For sale</Nav.Link>
-              </Nav.Item>
-            </Col>
-            <Col>
+            {listingSection.map(({ key, name }) => (
+              <Col key={key}>
+                <Nav.Item>
+                  <Nav.Link eventKey={key}>{name}</Nav.Link>
+                </Nav.Item>
+              </Col>
+            ))}
+            {/* <Col>
               <Nav.Item>
                 <Nav.Link eventKey="rent">For rent</Nav.Link>
               </Nav.Item>
-            </Col>
+            </Col> */}
           </Nav>
         </Tab.Container>
       ) : (

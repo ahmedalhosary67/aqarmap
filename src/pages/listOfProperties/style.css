@@ -4,7 +4,7 @@
 .upperCase {
   text-transform: capitalize;
 }
-.container {
+.body {
   flex: 1;
 }
 .ant-form-item-label > label {
