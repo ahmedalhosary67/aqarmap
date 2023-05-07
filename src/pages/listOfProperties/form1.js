@@ -41,7 +41,7 @@ export default function Form1() {
         </Col>
         <Col md={6}>
           <AppSelect
-            onChange={onChangeArea}
+            onChange={onChangeCity}
             name="listingSection"
             label="Listing Section"
             data={propertyType}
