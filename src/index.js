@@ -11,6 +11,7 @@ import Root from "./pages/root";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ErrorPage from "./pages/errorPage";
 import "./index.css";
+import ListOfProperties from "./pages/listOfProperties";
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -19,7 +20,7 @@ const routes = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       {
-        path: "compounds",
+        path: "compounds/:type",
         element: <Compounds />,
       },
       {
@@ -33,6 +34,10 @@ const routes = createBrowserRouter([
       {
         path: "Listing/:id",
         element: <ListingPage />,
+      },
+      {
+        path: "ListOfProperties",
+        element: <ListOfProperties />,
       },
     ],
   },

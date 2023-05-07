@@ -1,0 +1,46 @@
+{
+    "help": {
+        "en": "Help?",
+        "ar": "مساعدة؟"
+    },
+    "search": {
+        "en": "SEARCH",
+        "ar": "بحث"
+    },
+    "know": {
+        "en": "KNOW",
+        "ar": "اعرف"
+    },
+    "list": {
+        "en": "LIST",
+        "ar": "قائمة"
+    },
+    "properties": {
+        "en": "Properties",
+        "ar": "عقارات"
+    },
+    "compounds": {
+        "en": "Compounds",
+        "ar": "كمبوندات"
+    },
+    "footermassege": {
+        "en": "Aqarmap services allow you to buy or sell a property while providing essential information to help you take one of life’s biggest financial decisions",
+        "ar": "تتيح لك خدمات عقارماب شراء أو بيع عقار أثناء توفير المعلومات الأساسية لمساعدتك على التخلص من أكبر القرارات المالية في الحياة."
+    },
+    "new": {
+        "en": "New",
+        "ar": "جديد"
+    },
+    "for": {
+        "en": "For",
+        "ar": ""
+    },
+    "sale": {
+        "en": "Sale",
+        "ar": "للبيع"
+    },
+    "rent": {
+        "en": "Rent",
+        "ar": "للإيجار"
+    }
+}

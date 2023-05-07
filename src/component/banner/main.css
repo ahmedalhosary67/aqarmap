@@ -1,15 +1,24 @@
-.sale1{
-    text-decoration: none !important;
-    color: inherit;
+.sale1 {
+  cursor: pointer;
+  color: white;
+  transition: all 0.1s ease-in-out;
 }
-.banner{
-    background-image: url("/public/image/1.jpg");
-    background-size: cover;
-    padding: 100px 0;
+.sale1:hover {
+  color: #0277bd;
+}
+.banner {
+  background-image: url(/image/2.jpg);
+  background-size: cover;
+  min-height: calc(100vh - 56px);
+  border-radius: 0 !important;
+  justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
-    .banner-text{
-        font-size: 20px;
-    }
+.banner .titleBanner {
+  color: white;
+  text-align: center;
+}
+
+.rotateimage {
+  transform: scaleX(-1);
 }

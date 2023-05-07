@@ -1,8 +1,10 @@
-import React from "react";
-import { Col, Container, ListGroup, Navbar, Row } from "react-bootstrap";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Lang, trans, transApi } from "../../context/lang";
+import { Col, Container, ListGroup, Navbar, Row } from "react-bootstrap";
 
 const Footer = () => {
+  const { lang, setLang } = useContext(Lang);
   return (
     <>
       <footer className="footer py-5">
@@ -13,7 +15,11 @@ const Footer = () => {
                 <Navbar.Brand>
                   <Link to="/">
                     <img
-                      src="../image/EnglishLogoWhite.png"
+                      src={
+                        lang === "ar"
+                          ? "/image/logo-ar-white.svg"
+                          : "/image/EnglishLogoWhite.png"
+                      }
                       width="170"
                       className="d-inline-block"
                       alt="Aqarmap logo"
@@ -27,9 +33,7 @@ const Footer = () => {
                 />
               </div>
               <div>
-                Aqarmap services allow you to buy or sell a property while
-                providing essential information to help you take one of life’s
-                biggest financial decisions.
+                {trans("footerMassege")}
               </div>
             </Col>
             <Col md="1"></Col>

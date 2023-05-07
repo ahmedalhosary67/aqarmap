@@ -8,15 +8,15 @@ import {
   Row,
 } from "react-bootstrap";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import Sider from "antd/lib/layout/Sider";
 import { useParams } from "react-router-dom";
 import "./main.css";
 import FilteredCard from "../../component/filteredCard";
+import Sider from "../../component/sider";
 
 export default function Properies() {
   const params = useParams();
 
-  // console.log(data);
+  console.log(params);
 
   return (
     <>
@@ -35,24 +35,11 @@ export default function Properies() {
             <ArrowRightIcon color="warning" fontSize="large" />
             Properties For <span>{params.type}</span>
           </h2>
-          <small className="d-flex">
-            <ArrowRightIcon
-              color="warning"
-              fontSize="large"
-              style={{ visibility: "hidden" }}
-            />
-            <span>
-              Best properties For sale in , compare with prices and photos
-              between <span className="counter">211,224</span> properties of
-              different areas. Search in using the map and contact the seller
-              directly.
-            </span>
-          </small>
         </Row>
         <Row>
           <Col sm={8}>
             <Row>
-              <FilteredCard />
+              <FilteredCard properties={true} />
             </Row>
           </Col>
           <Col sm={4}>
