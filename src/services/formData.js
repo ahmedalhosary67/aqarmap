@@ -108,8 +108,8 @@ export const propertyType = [
 ];
 export const propertySection = [
   { key: "All", name: "All" },
-  { key: "Cash", name: "Cash" },
-  { key: "Installments", name: "Installments" },
+  { key: "sale", name: "forSale" },
+  { key: "rent", name: "For Rent" },
 ];
 export const paymentMethod = [
   { key: "All", name: "All" },
