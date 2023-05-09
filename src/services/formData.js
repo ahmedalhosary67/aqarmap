@@ -110,15 +110,32 @@ export const propertyType = [
     ],
   },
 ];
-export const propertySection = [
-  { key: "All", name: "All" },
-  { key: "sale", name: "forSale" },
-  { key: "rent", name: "For Rent" },
-];
 export const paymentMethod = [
   { key: "All", name: "All" },
   { key: "Cash", name: "Cash" },
   { key: "Installments", name: "Installments" },
+];
+export const View = [
+  { key: "mainStreet", name: "Main Street" },
+  { key: "sideStreet", name: "Side Street" },
+  { key: "Corner", name: "Corner" },
+  { key: "Back", name: "Back" },
+  { key: "Garden", name: "Garden" },
+  { key: "Pool", name: "Pool" },
+  { key: "Seaview", name: "Seaview" },
+  { key: "Nile", name: "Nile" },
+  { key: "Golf", name: "Golf" },
+  { key: "Plaza", name: "Plaza" },
+  { key: "Lake", name: "Lake" },
+  { key: "Club", name: "Club" },
+  { key: "Other", name: "Other" },
+];
+export const typeOfFinish = [
+  { key: "SuperLux", name: "Super Lux" },
+  { key: "ExtraSuperLux", name: "Extra Super Lux" },
+  { key: "Lux", name: "Lux" },
+  { key: "SimiFinished", name: "Simi Finished" },
+  { key: "WithoutFinish", name: "Without Finish" },
 ];
 export const Mortgage = [
   { key: "All", name: "All Financing Options" },
@@ -126,19 +143,32 @@ export const Mortgage = [
   { key: "CBE-8%", name: "CBE 8% Initiative" },
   { key: "Commercial", name: "Commercial Financing" },
 ];
+export const Registered = [
+  { key: "yes", name: "Yes" },
+  { key: "no", name: "No" },
+  { key: "notSure", name: "Not Sure" },
+];
+export const Market = [
+  { key: "fromDeveloper", name: "From Developer" },
+  { key: "fromOwner", name: "From Owner" },
+];
 
 export const priceRang = [];
 for (let i = 100000; i <= 1000000; i += 50000) {
-  const commas = i.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  const commas = i.toLocaleString();
 
   priceRang.push({ key: i, key: commas });
 }
 
 export const areaRang = [];
 for (let i = 70; i <= 1000; i += 10) {
-  const commas = i.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  const commas = i.toLocaleString();
 
   areaRang.push({ key: i, key: commas });
+}
+export const yearOfBuilding = [];
+for (let i = 2030; i >= 1900; i--) {
+  yearOfBuilding.push({ key: i, name: i });
 }
 
 export const sections = ["is-rent", "is-sale"];

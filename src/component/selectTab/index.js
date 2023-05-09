@@ -26,11 +26,6 @@ export default function SelectTab({
                 </Nav.Item>
               </Col>
             ))}
-            {/* <Col>
-              <Nav.Item>
-                <Nav.Link eventKey="rent">For rent</Nav.Link>
-              </Nav.Item>
-            </Col> */}
           </Nav>
         </Tab.Container>
       ) : (

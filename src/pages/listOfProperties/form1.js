@@ -1,30 +1,18 @@
-import React, { useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Col, Row } from "react-bootstrap";
 import "./style.css";
-import { Button, Cascader, Form, Input, Select } from "antd";
-import SelectTab from "../../component/selectTab";
 import AppSelect from "../../component/AppSelect";
-import { propertySection, propertyType } from "../../services/formData";
+import { listingSection, propertyType } from "../../services/formData";
+import governorates from "../../services/governorates.json";
+import cities from "../../services/cities.json";
+import { Cascader, Form } from "antd";
 
 export default function Form1() {
-  const [state, setState] = useState([]);
-  const [area, setArea] = useState(null);
-  const [location, setLocation] = useState(null);
+  const [citiesFiltered, setCitiesFiltered] = useState(null);
+  const [city, setCity] = useState();
 
-  const onChangeCity = (value) => {
-    propertyType.find((item) => item.key == value).hasOwnProperty("children")
-      ? setArea(propertyType.find((item) => item.key == value).children)
-      : setArea(null);
-    console.log(value);
-  };
-  const onChangeArea = (value) => {
-    area.find((item) => item.key == value).hasOwnProperty("children")
-      ? setLocation(propertyType.find((item) => item.key == value).children)
-      : setLocation(null);
-    console.log(value);
-  };
-  const onChange = (value) => {
+  const onChangeGovernorate = (value, item) => {
+    setCitiesFiltered(cities.filter((city) => city.governorate_id == value));
     console.log(value);
   };
 
@@ -32,50 +20,49 @@ export default function Form1() {
     <>
       <Row>
         <Col md={6}>
-          <AppSelect
-            onChange={onChange}
-            name="listingType"
-            label="Listing Type"
-            data={propertyType}
-          />
+          <Form.Item
+            name="propertyType"
+            label="Property Type"
+            rules={[
+              {
+                requiredd: true,
+              },
+            ]}
+          >
+            <Cascader
+              options={propertyType.map((item) => ({
+                label: item.name,
+                value: item.key,
+                children:
+                  item.children &&
+                  item.children.map((child) => ({
+                    label: child.name,
+                    value: child.key,
+                  })),
+              }))}
+            />
+          </Form.Item>
         </Col>
         <Col md={6}>
           <AppSelect
-            onChange={onChange}
             name="listingSection"
             label="Listing Section"
-            data={propertySection}
+            data={listingSection}
           />
         </Col>
         <Col md={4}>
           <AppSelect
-            onChange={onChangeCity}
-            name="city"
-            label="City"
-            data={propertyType}
+            onChange={onChangeGovernorate}
+            name="governorates"
+            label="Governorates"
+            data={governorates}
           />
         </Col>
-        {area && (
+        {citiesFiltered && (
           <Col md={4}>
-            <AppSelect
-              onChange={onChangeArea}
-              name="area"
-              label="Area"
-              data={area}
-            />
+            <AppSelect name="city" label="City" data={citiesFiltered} />
           </Col>
         )}
-
-        <Col md={4}>
-          {location && (
-            <AppSelect
-              onChange={onChangeLocation}
-              name="location"
-              label="Location"
-              data={area}
-            />
-          )}
-        </Col>
       </Row>
     </>
   );

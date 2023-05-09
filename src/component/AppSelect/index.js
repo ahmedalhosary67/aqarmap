@@ -1,15 +1,12 @@
-import React, { useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import React, { useEffect } from "react";
 import "antd/dist/antd.css";
-import { useNavigate } from "react-router-dom";
-import { transApi } from "../../context/lang";
+import { transApi, transDash } from "../../context/lang";
 import "./main.css";
 import { Form, Select } from "antd";
 const { Option } = Select;
 
-const AppSelect = ({ onChange, name, label, data }) => {
-  const navigate = useNavigate();
-
+const AppSelect = ({ onChange, name, label, data, value, required }) => {
+  const placeHolder = "Select";
   return (
     <>
       <Form.Item
@@ -17,18 +14,19 @@ const AppSelect = ({ onChange, name, label, data }) => {
         label={label}
         rules={[
           {
-            // required: true,
+            required: required,
           },
         ]}
       >
         <Select
-          placeholder="Select a option and change input text above"
+          placeholder={placeHolder}
           onChange={onChange}
+          value={value}
           allowClear
         >
           {data.map((item) => (
-            <Option key={item.key} value={item.key}>
-              {item.name}
+            <Option key={item.key || item.id} value={item.key}>
+              {item.name || transDash(item)}
             </Option>
           ))}
         </Select>

@@ -16,9 +16,13 @@ export function trans(name) {
   return langChange;
 }
 
-
 export function transApi(name) {
   const { lang } = useContext(Lang);
 
   return lang === "en" ? name.en : name.ar;
+}
+export function transDash(name) {
+  const { lang } = useContext(Lang);
+
+  return lang === "en" ? name.name_en : name.name_ar;
 }

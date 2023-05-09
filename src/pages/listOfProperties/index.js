@@ -4,20 +4,24 @@ import "./style.css";
 import { Button, Form } from "antd";
 import Form1 from "./form1";
 import Form2 from "./form2";
-import Form3 from "./form3";
 import { useNavigate } from "react-router-dom";
 
 export default function ListOfProperties() {
   const navigate = useNavigate();
-  const [num, setNum] = React.useState(1);
+  const [form1, setForm1] = React.useState(false);
   const [data, setData] = React.useState({});
+  const { form } = Form.useForm();
 
-  const handleNext = (values, item) => {
+  const handleNext = (values) => {
     setData({ ...data, ...values });
-    num < 3 && setNum(num + 1);
+    setForm1(false);
   };
   const onFinish = (values, e) => {
-    setData({ ...data, ...values });
+    setData({
+      ...data,
+      ...values,
+      // propertyType: data.propertyType[data.propertyType.length - 1],
+    });
     navigate("/");
   };
 
@@ -29,23 +33,18 @@ export default function ListOfProperties() {
     <>
       <Container className="body">
         <br />
-        <h2>List your property</h2>
+        <h2>List property</h2>
         <br />
         <Form
           layout="vertical"
           name="control-ref"
-          onFinish={num < 3 ? handleNext : onFinish}
+          onFinish={form1 ? handleNext : onFinish}
         >
-          {num === 1 ? (
-            <Form1 />
-          ) : num == 2 ? (
-            <Form2 />
-          ) : num == 3 ? (
-            <Form3 />
-          ) : null}
+          {form1 && <Form1 />}
+          {!form1 && <Form2 />}
           <Form.Item>
             <Button type="primary" htmlType="submit">
-              {num < 3 ? "Next" : "Submit"}
+              {form1 ? "Next" : "Submit"}
             </Button>
           </Form.Item>
         </Form>
