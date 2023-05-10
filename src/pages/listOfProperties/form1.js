@@ -25,7 +25,7 @@ export default function Form1() {
             label="Property Type"
             rules={[
               {
-                requiredd: true,
+                required: true,
               },
             ]}
           >

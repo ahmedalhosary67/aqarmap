@@ -43,6 +43,10 @@ export default function Form2() {
       </Container>
       <h3 className="subTitle">Advertiser Details</h3>
       <Container>
+        <p>
+          If you want to update the current phone number, please go to
+          <a href="#">My Account</a>
+        </p>
         <AppInput
           name="title_en"
           label="Title in English"
