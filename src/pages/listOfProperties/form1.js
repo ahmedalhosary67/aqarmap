@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import "./style.css";
 import AppSelect from "../../component/AppSelect";
@@ -9,7 +9,7 @@ import { Cascader, Form } from "antd";
 
 export default function Form1() {
   const [citiesFiltered, setCitiesFiltered] = useState(null);
-  const [city, setCity] = useState();
+  // const [city, setCity] = useState();
 
   const onChangeGovernorate = (value, item) => {
     setCitiesFiltered(cities.filter((city) => city.governorate_id == value));

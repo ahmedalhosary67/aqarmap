@@ -1,6 +1,6 @@
 import React from "react";
 import { Badge, Card } from "antd";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import "antd/dist/antd.css";
 import { Stack } from "@mui/material";
 import { useNavigate } from "react-router-dom";

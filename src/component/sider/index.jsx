@@ -3,7 +3,7 @@ import {
   EllipsisOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
-import { Alert, Avatar, Card, Skeleton, Switch } from "antd";
+import { Avatar, Card, Skeleton, Switch } from "antd";
 import React, { useState } from "react";
 const { Meta } = Card;
 

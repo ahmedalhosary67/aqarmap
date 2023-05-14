@@ -1,23 +1,10 @@
 import React, { useEffect } from "react";
 import "antd/dist/antd.css";
-import { transApi, transDash } from "../../context/lang";
 import "./main.css";
-import { Form, Input, Select } from "antd";
-import TextArea from "antd/lib/input/TextArea";
+import { Form, Input } from "antd";
 import { useState } from "react";
-const { Option } = Select;
 
-const AppInput = ({
-  onChange,
-  name,
-  label,
-  data,
-  value,
-  input,
-  textArea,
-  required,
-  type,
-}) => {
+const AppInput = ({ name, label, textArea, required, type, addonBefore }) => {
   const [num, setNum] = useState(0);
   const handleNumber = (i) => {
     console.log(i.target.value.toLocaleString());
@@ -38,10 +25,20 @@ const AppInput = ({
           },
         ]}
       >
-        {input ? (
-          <Input type={type} onChange={handleNumber} value={num} />
+        {textArea ? (
+          <Input.TextArea
+            rows={3}
+            style={{
+              resize: "none",
+            }}
+          />
         ) : (
-          textArea && <TextArea rows={3} />
+          <Input
+            type={type}
+            onChange={handleNumber}
+            value={num}
+            addonBefore={addonBefore}
+          />
         )}
       </Form.Item>
     </>

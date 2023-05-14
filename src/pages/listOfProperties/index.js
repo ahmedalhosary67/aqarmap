@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function ListOfProperties() {
   const navigate = useNavigate();
-  const [form1, setForm1] = React.useState(true);
+  const [form1, setForm1] = React.useState(false);
   const [data, setData] = React.useState({});
   const { form } = Form.useForm();
 
@@ -40,8 +40,7 @@ export default function ListOfProperties() {
           name="control-ref"
           onFinish={form1 ? handleNext : onFinish}
         >
-          {form1 && <Form1 />}
-          {!form1 && <Form2 />}
+          {form1 ? <Form1 /> : <Form2 />}
           <Form.Item>
             <Button type="primary" htmlType="submit">
               {form1 ? "Next" : "Submit"}

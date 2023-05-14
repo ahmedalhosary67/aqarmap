@@ -1,14 +1,13 @@
 import React, { useContext, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Col, Row, Table } from "react-bootstrap";
-import CardD from "../card";
 import originalFakeData from "../../services/data.json";
 import { Data } from "../../context/context";
 import { Card } from "antd";
 import { LocationOnOutlined } from "@mui/icons-material";
 
 export default function ListingSection() {
-  const { data, setData } = useContext(Data);
+  // const { data, setData } = useContext(Data);
   const [allData, setAllData] = useState(originalFakeData);
   const [loading, setLoading] = useState(true);
   const [cardData, setCardData] = useState([]);
@@ -79,7 +78,8 @@ export default function ListingSection() {
                 <tr>
                   <td>Price Per Meter</td>
                   <td>
-                    {Math.round(cardData.price / cardData.area)} EGP/M<sup>2</sup>
+                    {Math.round(cardData.price / cardData.area)} EGP/M
+                    <sup>2</sup>
                   </td>
                 </tr>
                 <tr>

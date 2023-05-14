@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { Lang, trans, transApi } from "../../context/lang";
+import { Lang, trans } from "../../context/lang";
 import { Col, Container, ListGroup, Navbar, Row } from "react-bootstrap";
 
 const Footer = () => {
@@ -32,9 +32,7 @@ const Footer = () => {
                   alt="Aqarmap logo"
                 />
               </div>
-              <div>
-                {trans("footerMassege")}
-              </div>
+              <div>{trans("footerMassege")}</div>
             </Col>
             <Col md="1"></Col>
             <Col md="5">

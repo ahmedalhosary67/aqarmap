@@ -1,7 +1,6 @@
 import React from "react";
-import { Badge } from "antd";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import data from "../../services/data.json";
 import "./main.css";
 import { Button, Stack } from "@mui/material";

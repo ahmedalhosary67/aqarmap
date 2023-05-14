@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "antd/dist/antd.css";
-import { transApi, transDash } from "../../context/lang";
+import { transDash } from "../../context/lang";
 import "./main.css";
 import { Form, Select } from "antd";
 const { Option } = Select;
