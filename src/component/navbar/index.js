@@ -54,7 +54,7 @@ const NavBar = () => {
                   </NavDropdown.Item>
                 ))}
               </NavDropdown>
-              <NavDropdown
+              {/* <NavDropdown
                 title={
                   <>
                     <img
@@ -80,7 +80,7 @@ const NavBar = () => {
                     </Stack>
                   </NavDropdown.Item>
                 ))}
-              </NavDropdown>
+              </NavDropdown> */}
               <NavDropdown
                 title={
                   <>

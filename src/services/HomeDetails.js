@@ -13,13 +13,13 @@ export const Search = [
     description: "Compare all compound features & prices",
     newb: true,
   },
-  {
-    link: "#OnlineExpos",
-    imgIcon: "./image/ic_expo.svg",
-    title: { en: "Online Expos", ar: "اونلاين" },
-    description: "Book exclusive offers via your credit card",
-    newb: true,
-  },
+  // {
+  //   link: "#OnlineExpos",
+  //   imgIcon: "./image/ic_expo.svg",
+  //   title: { en: "Online Expos", ar: "اونلاين" },
+  //   description: "Book exclusive offers via your credit card",
+  //   newb: true,
+  // },
 ];
 
 export const Know = [
@@ -82,11 +82,11 @@ export const List = [
     description: "Reach millions of users directly",
     newb: false,
   },
-  {
-    link: "List",
-    imgIcon: "./image/ic_Companies_Registration.svg",
-    title: { en: "List Company Properties", ar: "List Company Properties" },
-    description: "Join thousands of companies now",
-    newb: false,
-  },
+  // {
+  //   link: "ListOfProperties/compound",
+  //   imgIcon: "./image/ic_Companies_Registration.svg",
+  //   title: { en: "List Company Properties", ar: "List Company Properties" },
+  //   description: "Join thousands of companies now",
+  //   newb: false,
+  // },
 ];

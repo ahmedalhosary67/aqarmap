@@ -21,7 +21,7 @@ const Details = () => {
           ))}
         </Row>
 
-        <Row className="my-5" gap="3">
+        {/* <Row className="my-5" gap="3">
           <h4>KNOW</h4>
           {Know.map((item) => (
             <AppCard
@@ -33,7 +33,7 @@ const Details = () => {
               newb={item.newb}
             />
           ))}
-        </Row>
+        </Row> */}
 
         <Row className="my-5">
           <h4>LIST</h4>

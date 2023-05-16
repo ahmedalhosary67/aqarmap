@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function ListOfProperties() {
   const navigate = useNavigate();
-  const [form1, setForm1] = React.useState(false);
+  const [form1, setForm1] = React.useState(true);
   const [data, setData] = React.useState({});
   const { form } = Form.useForm();
 
