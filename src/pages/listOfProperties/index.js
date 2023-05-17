@@ -5,20 +5,23 @@ import { Button, Form } from "antd";
 import Form1 from "./form1";
 import Form2 from "./form2";
 import { useNavigate } from "react-router-dom";
+import { Data } from "../../context/context";
+import allData from "../../services/data.json";
 
 export default function ListOfProperties() {
   const navigate = useNavigate();
   const [form1, setForm1] = React.useState(true);
-  const [data, setData] = React.useState({});
-  const { form } = Form.useForm();
+  const [data, setData] = React.useState(Data);
+  const [listingData, setListingData] = React.useState({});
 
   const handleNext = (values) => {
-    setData({ ...data, ...values });
+    setListingData({ ...listingData, ...values });
     setForm1(false);
   };
   const onFinish = (values, e) => {
-    setData({
-      ...data,
+    setListingData({
+      _id: allData.length + 1,
+      ...listingData,
       ...values,
       // propertyType: data.propertyType[data.propertyType.length - 1],
     });
@@ -26,8 +29,8 @@ export default function ListOfProperties() {
   };
 
   useEffect(() => {
-    console.log(data);
-  }, [data]);
+    console.log(listingData);
+  }, [listingData]);
 
   return (
     <>

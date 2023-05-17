@@ -21,7 +21,7 @@ const AppInput = ({ name, label, textArea, required, type, addonBefore }) => {
         label={label}
         rules={[
           {
-            required: required,
+            required: false,
           },
         ]}
       >

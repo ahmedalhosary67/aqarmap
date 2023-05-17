@@ -13,6 +13,7 @@ import {
 } from "../../services/formData";
 import { Form, Select, Switch } from "antd";
 import { WhatsApp } from "@mui/icons-material";
+import { useState } from "react";
 const { Option } = Select;
 const selectBefore = (
   <Select defaultValue="egy">
@@ -131,8 +132,10 @@ const formSections2 = [
 ];
 
 export default function Form2() {
-  const onChange = (checked) => {
-    console.log(`switch to ${checked}`);
+  const [checked, setcChecked] = useState(true);
+  const onChange = (e) => {
+    setcChecked(!checked);
+    console.log(`switch to ${e}`);
   };
   return (
     <>
@@ -170,7 +173,7 @@ export default function Form2() {
           }
           style={{ display: "flex", flexDirection: "row" }}
         >
-          <Switch defaultChecked onChange={onChange} />
+          <Switch checked={checked} onChange={onChange} />
         </Form.Item>
       </Container>
       <h3 className="subTitle">Property Details</h3>
