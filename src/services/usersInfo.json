@@ -1,0 +1,63 @@
+[
+  {
+    "_id": "1",
+    "name": "Ahmed",
+    "phoneNo": "111111111111",
+    "whatsApp": "111111111111",
+    "email": "ads@dasf",
+    "img": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    "avatar": "https://joesch.moe/api/v1/male/random",
+    "userType": "privateOwner",
+    "password": "0000",
+    "isLogin": false
+  },
+  {
+    "_id": "2",
+    "name": "Mohamed",
+    "phoneNo": "111111111111",
+    "whatsApp": "111111111111",
+    "email": "ads@dasf",
+    "img": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    "avatar": "https://joesch.moe/api/v1/male/random",
+    "userType": "privateOwner",
+    "password": "0000",
+    "isLogin": false
+  },
+  {
+    "_id": "3",
+    "name": "Hassan",
+    "phoneNo": "111111111111",
+    "whatsApp": "111111111111",
+    "email": "ads@dasf",
+    "img": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    "avatar": "https://joesch.moe/api/v1/male/random",
+    "userType": "privateOwner",
+    "password": "0000",
+    "isLogin": false
+  },
+  {
+    "_id": "4",
+    "name": "Asmaa",
+    "phoneNo": "111111111111",
+    "whatsApp": "111111111111",
+    "email": "ads@dasf",
+    "img": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    "avatar": "https://joesch.moe/api/v1/female/random",
+    "userType": "privateOwner",
+    "password": "0000",
+    "isLogin": false
+  },
+  {
+    "_id": "5",
+    "name": "Esraa",
+    "phoneNo": "111111111111",
+    "whatsApp": "111111111111",
+    "email": "ads@dasf",
+    "img": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    "avatar": "https://joesch.moe/api/v1/female/random",
+    "userType": "privateOwner",
+    "password": "0000",
+    "isLogin": false
+  }
+  
+]

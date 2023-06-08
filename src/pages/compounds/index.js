@@ -38,7 +38,7 @@ const Compounds = () => {
         </Row>
         <Row>
           <Col sm={4}>
-            <Sider />
+          <Sider userInfo={false} relatedProperty={false} topAgent={true} />
           </Col>
           <Col sm={8}>
             <Row>

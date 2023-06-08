@@ -14,7 +14,8 @@
     "area": 200,
     "rooms": 2,
     "type": "apartments",
-    "paymentMethod": "Installments"
+    "paymentMethod": "Installments",
+    "sellerInfo": "1"
   },
   {
     "_id": "2",
@@ -30,7 +31,8 @@
     "property": true,
     "area": 500,
     "type": "villas",
-    "paymentMethod": "Cash"
+    "paymentMethod": "Cash",
+    "sellerInfo": "4"
   },
   {
     "_id": "3",
@@ -48,7 +50,8 @@
     "rooms": 2,
     "bathrooms": 1,
     "type": "chalets",
-    "paymentMethod": "Cash"
+    "paymentMethod": "Cash",
+    "sellerInfo": "1"
   },
   {
     "_id": "4",
@@ -66,7 +69,8 @@
     "rooms": 3,
     "bathrooms": 1,
     "type": "land",
-    "paymentMethod": "Cash"
+    "paymentMethod": "Cash",
+    "sellerInfo": "1"
   },
   {
     "_id": "5",
@@ -84,7 +88,8 @@
     "rooms": 3,
     "bathrooms": 1,
     "type": "apartments",
-    "paymentMethod": "Cash"
+    "paymentMethod": "Cash",
+    "sellerInfo": "1"
   },
   {
     "_id": "6",
@@ -102,7 +107,8 @@
     "rooms": 4,
     "bathrooms": 2,
     "type": "apartments",
-    "paymentMethod": "Installments"
+    "paymentMethod": "Installments",
+    "sellerInfo": "1"
   },
   {
     "_id": "7",
@@ -120,7 +126,8 @@
     "rooms": 3,
     "bathrooms": 1,
     "type": "apartments",
-    "paymentMethod": "Cash"
+    "paymentMethod": "Cash",
+    "sellerInfo": "1"
   },
   {
     "_id": "8",
@@ -137,7 +144,8 @@
     "area": 200,
     "rooms": 3,
     "type": "villas",
-    "paymentMethod": "Cash"
+    "paymentMethod": "Cash",
+    "sellerInfo": "1"
   },
   {
     "_id": "9",
@@ -157,7 +165,8 @@
     "bathrooms": 1,
     "finishType": "EXTRA_SUPER_LUX",
     "type": "chalets",
-    "paymentMethod": "Installments"
+    "paymentMethod": "Installments",
+    "sellerInfo": "1"
   },
   {
     "_id": "10",
@@ -177,7 +186,8 @@
     "bathrooms": 1,
     "finishType": "EXTRA_SUPER_LUX",
     "type": "chalets",
-    "paymentMethod": "Installments"
+    "paymentMethod": "Installments",
+    "sellerInfo": "2"
   },
   {
     "_id": "11",
@@ -197,7 +207,8 @@
     "bathrooms": 1,
     "finishType": "EXTRA_SUPER_LUX",
     "type": "chalets",
-    "paymentMethod": "Installments"
+    "paymentMethod": "Installments",
+    "sellerInfo": "2"
   },
   {
     "_id": "12",
@@ -217,7 +228,8 @@
     "bathrooms": 1,
     "finishType": "EXTRA_SUPER_LUX",
     "type": "chalets",
-    "paymentMethod": "Installments"
+    "paymentMethod": "Installments",
+    "sellerInfo": "3"
   },
   {
     "_id": "13",
@@ -237,7 +249,8 @@
     "bathrooms": 1,
     "finishType": "EXTRA_SUPER_LUX",
     "type": "chalets",
-    "paymentMethod": "Installments"
+    "paymentMethod": "Installments",
+    "sellerInfo": "2"
   },
   {
     "_id": "14",
@@ -257,7 +270,8 @@
     "bathrooms": 1,
     "finishType": "EXTRA_SUPER_LUX",
     "type": "chalets",
-    "paymentMethod": "Installments"
+    "paymentMethod": "Installments",
+    "sellerInfo": "1"
   },
   {
     "_id": "15",
@@ -277,7 +291,8 @@
     "bathrooms": 1,
     "finishType": "EXTRA_SUPER_LUX",
     "type": "chalets",
-    "paymentMethod": "Installments"
+    "paymentMethod": "Installments",
+    "sellerInfo": "1"
   },
   {
     "_id": "16",
@@ -297,7 +312,8 @@
     "bathrooms": 1,
     "finishType": "EXTRA_SUPER_LUX",
     "type": "chalets",
-    "paymentMethod": "Installments"
+    "paymentMethod": "Installments",
+    "sellerInfo": "1"
   },
   {
     "_id": "17",
@@ -317,7 +333,8 @@
     "bathrooms": 1,
     "finishType": "EXTRA_SUPER_LUX",
     "type": "chalets",
-    "paymentMethod": "Installments"
+    "paymentMethod": "Installments",
+    "sellerInfo": "1"
   },
   {
     "_id": "18",
@@ -337,7 +354,8 @@
     "bathrooms": 1,
     "finishType": "EXTRA_SUPER_LUX",
     "type": "chalets",
-    "paymentMethod": "Installments"
+    "paymentMethod": "Installments",
+    "sellerInfo": "1"
   },
   {
     "_id": "19",
@@ -357,7 +375,8 @@
     "bathrooms": 1,
     "finishType": "EXTRA_SUPER_LUX",
     "type": "chalets",
-    "paymentMethod": "Installments"
+    "paymentMethod": "Installments",
+    "sellerInfo": "1"
   },
   {
     "_id": "20",
@@ -377,7 +396,8 @@
     "bathrooms": 1,
     "finishType": "EXTRA_SUPER_LUX",
     "type": "chalets",
-    "paymentMethod": "Installments"
+    "paymentMethod": "Installments",
+    "sellerInfo": "1"
   },
   {
     "_id": "21",
@@ -397,6 +417,7 @@
     "bathrooms": 1,
     "finishType": "EXTRA_SUPER_LUX",
     "type": "chalets",
-    "paymentMethod": "Installments"
+    "paymentMethod": "Installments",
+    "sellerInfo": "3"
   }
 ]

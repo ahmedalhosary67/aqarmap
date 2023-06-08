@@ -15,7 +15,7 @@ export default function ListingSection() {
 
   useEffect(() => {
     setCardData(allData.find((item) => item._id === params.id));
-    console.log(cardData);
+    // console.log(cardData);
     setLoading(false);
   }, [cardData]);
 

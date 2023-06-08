@@ -43,7 +43,7 @@ export default function Properies() {
             </Row>
           </Col>
           <Col sm={4}>
-            <Sider />
+          <Sider userInfo={false} relatedProperty={false} topAgent={true} />
           </Col>
         </Row>
       </Container>

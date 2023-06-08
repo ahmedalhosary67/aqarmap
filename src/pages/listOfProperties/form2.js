@@ -150,7 +150,7 @@ export default function Form2() {
           />
         ))}
       </Container>
-      <h3 className="subTitle">Advertiser Details</h3>
+      <h3 className="subTitle2">Advertiser Details</h3>
       <Container>
         {/* <p>
           If you want to update the current phone number, please go to
@@ -176,7 +176,7 @@ export default function Form2() {
           <Switch checked={checked} onChange={onChange} />
         </Form.Item>
       </Container>
-      <h3 className="subTitle">Property Details</h3>
+      <h3 className="subTitle2">Property Details</h3>
       <Row>
         {formSections2.map((x) =>
           x.select ? (
@@ -200,7 +200,7 @@ export default function Form2() {
           )
         )}
       </Row>
-      <h3 className="subTitle">Address</h3>
+      <h3 className="subTitle2">Address</h3>
       <Container>
         <AppInput
           name="propertyAddress"
