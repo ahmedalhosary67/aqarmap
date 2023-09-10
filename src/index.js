@@ -8,11 +8,11 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ListingPage from "./pages/listing";
 import Root from "./pages/root";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import ErrorPage from "./pages/errorPage";
 import "./index.css";
 import ListOfProperties from "./pages/listOfProperties";
-const routes = createBrowserRouter([
+const routes = createHashRouter([
   {
     path: "/",
     element: <Root />,
