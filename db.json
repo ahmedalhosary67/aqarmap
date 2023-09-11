@@ -1,5 +1,427 @@
 {
-  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
+  "data": [
+    {
+      "_id": "1",
+      "img": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+      "location": {
+        "name": "Ain Sokhna",
+        "key": "ainSokhna"
+      },
+      "description": "Chalet 95M for sale in IL Monte Galala - Ain Sokhna",
+      "avatar": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+      "section": "rent",
+      "price": 1000,
+      "property": true,
+      "area": 200,
+      "rooms": 2,
+      "type": "apartments",
+      "paymentMethod": "Installments",
+      "sellerInfo": "1"
+    },
+    {
+      "_id": "2",
+      "img": "https://www.utep.edu/extendeduniversity/utepconnect/blog/november-2018/is-online-education-as-effective-as-traditional-on-campus-schooling.jpg",
+      "location": {
+        "name": "بيت الوطن التكميلي, 6 أكتوبر",
+        "key": "watanOctober"
+      },
+      "description": "Apartments For sale in Bait Al Watan Al Takmely",
+      "avatar": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+      "section": "rent",
+      "price": 1000,
+      "property": true,
+      "area": 500,
+      "type": "villas",
+      "paymentMethod": "Cash",
+      "sellerInfo": "4"
+    },
+    {
+      "_id": "3",
+      "img": "https://www.besanttechnologies.com/wp-content/uploads/2019/11/online-training-1.png",
+      "location": {
+        "name": "Ain Sokhna",
+        "key": "ainSokhna"
+      },
+      "description": "Townhouse 155M for sale in IL Monte Galala - Ein Elsokhna",
+      "avatar": "https://joeschmoe.io/api/v1/jon",
+      "section": "sale",
+      "price": 700000,
+      "property": true,
+      "area": 100,
+      "rooms": 2,
+      "bathrooms": 1,
+      "type": "chalets",
+      "paymentMethod": "Cash",
+      "sellerInfo": "1"
+    },
+    {
+      "_id": "4",
+      "img": "https://fakeimg.pl/350x200/?text=Hello",
+      "location": {
+        "name": "North Coast",
+        "key": "northCoast"
+      },
+      "description": "Twin House 200m for sale in D Bay - North Coast",
+      "avatar": "https://joeschmoe.io/api/v1/jess",
+      "section": "sale",
+      "price": 500000,
+      "property": true,
+      "area": 105,
+      "rooms": 3,
+      "bathrooms": 1,
+      "type": "land",
+      "paymentMethod": "Cash",
+      "sellerInfo": "1"
+    },
+    {
+      "_id": "5",
+      "img": "https://fakeimg.pl/350x200/?text=North-Coast",
+      "location": {
+        "name": "North Coast",
+        "key": "northCoast"
+      },
+      "description": "Twin House 200m for sale in D Bay - North Coast",
+      "avatar": "https://joeschmoe.io/api/v1/jess",
+      "section": "sale",
+      "price": 500000,
+      "property": false,
+      "area": 105,
+      "rooms": 3,
+      "bathrooms": 1,
+      "type": "apartments",
+      "paymentMethod": "Cash",
+      "sellerInfo": "1"
+    },
+    {
+      "_id": "6",
+      "img": "https://fakeimg.pl/350x200/?text=New-Cairo",
+      "location": {
+        "name": "New Cairo",
+        "key": "newCairo"
+      },
+      "description": "Apartments  For sale in Abd El-Salam Aref St",
+      "avatar": "https://joeschmoe.io/api/v1/jess",
+      "section": "sale",
+      "price": 800000,
+      "property": false,
+      "area": 215,
+      "rooms": 4,
+      "bathrooms": 2,
+      "type": "apartments",
+      "paymentMethod": "Installments",
+      "sellerInfo": "1"
+    },
+    {
+      "_id": "7",
+      "img": "https://fakeimg.pl/350x200/?text=Porto-ElSokhna",
+      "location": {
+        "name": "Jebal El Sokhna - Porto El Sokhna",
+        "key": "PortoElSokhna"
+      },
+      "description": "Twin House 200m for sale in D Bay - North Coast",
+      "avatar": "https://joeschmoe.io/api/v1/jess",
+      "section": "rent",
+      "price": 1000,
+      "property": false,
+      "area": 105,
+      "rooms": 3,
+      "bathrooms": 1,
+      "type": "apartments",
+      "paymentMethod": "Cash",
+      "sellerInfo": "1"
+    },
+    {
+      "_id": "8",
+      "img": "https://fakeimg.pl/350x200/?text=Porto-ElSokhna",
+      "location": {
+        "name": "Jebal El Sokhna - Porto El Sokhna",
+        "key": "PortoElSokhna"
+      },
+      "description": "Twin House 200m for sale in D Bay - North Coast",
+      "avatar": "https://joeschmoe.io/api/v1/jess",
+      "section": "sale",
+      "price": 650000,
+      "property": false,
+      "area": 200,
+      "rooms": 3,
+      "type": "villas",
+      "paymentMethod": "Cash",
+      "sellerInfo": "1"
+    },
+    {
+      "_id": "9",
+      "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+      "location": {
+        "name": "New Cairo",
+        "key": "newCairo"
+      },
+      "description": "Twin House 200m for sale in D Bay - North Coast",
+      "avatar": "https://joeschmoe.io/api/v1/jess",
+      "section": "rent",
+      "price": 12000,
+      "property": false,
+      "area": 559,
+      "rooms": 6,
+      "Floor": 14,
+      "bathrooms": 1,
+      "finishType": "EXTRA_SUPER_LUX",
+      "type": "chalets",
+      "paymentMethod": "Installments",
+      "sellerInfo": "1"
+    },
+    {
+      "_id": "10",
+      "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+      "location": {
+        "name": "New Cairo",
+        "key": "newCairo"
+      },
+      "description": "Twin House 200m for sale in D Bay - North Coast",
+      "avatar": "https://joeschmoe.io/api/v1/jess",
+      "section": "rent",
+      "price": 12000,
+      "property": false,
+      "area": 559,
+      "rooms": 6,
+      "Floor": 14,
+      "bathrooms": 1,
+      "finishType": "EXTRA_SUPER_LUX",
+      "type": "chalets",
+      "paymentMethod": "Installments",
+      "sellerInfo": "2"
+    },
+    {
+      "_id": "11",
+      "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+      "location": {
+        "name": "New Cairo",
+        "key": "newCairo"
+      },
+      "description": "Twin House 200m for sale in D Bay - North Coast",
+      "avatar": "https://joeschmoe.io/api/v1/jess",
+      "section": "rent",
+      "price": 12000,
+      "property": true,
+      "area": 559,
+      "rooms": 6,
+      "Floor": 14,
+      "bathrooms": 1,
+      "finishType": "EXTRA_SUPER_LUX",
+      "type": "chalets",
+      "paymentMethod": "Installments",
+      "sellerInfo": "2"
+    },
+    {
+      "_id": "12",
+      "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+      "location": {
+        "name": "New Cairo",
+        "key": "newCairo"
+      },
+      "description": "Twin House 200m for sale in D Bay - North Coast",
+      "avatar": "https://joeschmoe.io/api/v1/jess",
+      "section": "rent",
+      "price": 12000,
+      "property": false,
+      "area": 559,
+      "rooms": 6,
+      "Floor": 14,
+      "bathrooms": 1,
+      "finishType": "EXTRA_SUPER_LUX",
+      "type": "chalets",
+      "paymentMethod": "Installments",
+      "sellerInfo": "3"
+    },
+    {
+      "_id": "13",
+      "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+      "location": {
+        "name": "New Cairo",
+        "key": "newCairo"
+      },
+      "description": "Twin House 200m for sale in D Bay - North Coast",
+      "avatar": "https://joeschmoe.io/api/v1/jess",
+      "section": "rent",
+      "price": 12000,
+      "property": false,
+      "area": 559,
+      "rooms": 6,
+      "Floor": 14,
+      "bathrooms": 1,
+      "finishType": "EXTRA_SUPER_LUX",
+      "type": "chalets",
+      "paymentMethod": "Installments",
+      "sellerInfo": "2"
+    },
+    {
+      "_id": "14",
+      "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+      "location": {
+        "name": "New Cairo",
+        "key": "newCairo"
+      },
+      "description": "Twin House 200m for sale in D Bay - North Coast",
+      "avatar": "https://joeschmoe.io/api/v1/jess",
+      "section": "rent",
+      "price": 12000,
+      "property": false,
+      "area": 559,
+      "rooms": 6,
+      "Floor": 14,
+      "bathrooms": 1,
+      "finishType": "EXTRA_SUPER_LUX",
+      "type": "chalets",
+      "paymentMethod": "Installments",
+      "sellerInfo": "1"
+    },
+    {
+      "_id": "15",
+      "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+      "location": {
+        "name": "New Cairo",
+        "key": "newCairo"
+      },
+      "description": "Twin House 200m for sale in D Bay - North Coast",
+      "avatar": "https://joeschmoe.io/api/v1/jess",
+      "section": "rent",
+      "price": 12000,
+      "property": false,
+      "area": 559,
+      "rooms": 6,
+      "Floor": 14,
+      "bathrooms": 1,
+      "finishType": "EXTRA_SUPER_LUX",
+      "type": "chalets",
+      "paymentMethod": "Installments",
+      "sellerInfo": "1"
+    },
+    {
+      "_id": "16",
+      "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+      "location": {
+        "name": "New Cairo",
+        "key": "newCairo"
+      },
+      "description": "Twin House 200m for sale in D Bay - North Coast",
+      "avatar": "https://joeschmoe.io/api/v1/jess",
+      "section": "sale",
+      "price": 2000000,
+      "property": false,
+      "area": 559,
+      "rooms": 6,
+      "Floor": 14,
+      "bathrooms": 1,
+      "finishType": "EXTRA_SUPER_LUX",
+      "type": "chalets",
+      "paymentMethod": "Installments",
+      "sellerInfo": "1"
+    },
+    {
+      "_id": "17",
+      "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+      "location": {
+        "name": "New Cairo",
+        "key": "newCairo"
+      },
+      "description": "Twin House 200m for sale in D Bay - North Coast",
+      "avatar": "https://joeschmoe.io/api/v1/jess",
+      "section": "rent",
+      "price": 12000,
+      "property": false,
+      "area": 559,
+      "rooms": 6,
+      "Floor": 14,
+      "bathrooms": 1,
+      "finishType": "EXTRA_SUPER_LUX",
+      "type": "chalets",
+      "paymentMethod": "Installments",
+      "sellerInfo": "1"
+    },
+    {
+      "_id": "18",
+      "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+      "location": {
+        "name": "New Cairo",
+        "key": "newCairo"
+      },
+      "description": "Twin House 200m for sale in D Bay - North Coast",
+      "avatar": "https://joeschmoe.io/api/v1/jess",
+      "section": "sale",
+      "price": 12000,
+      "property": false,
+      "area": 559,
+      "rooms": 6,
+      "Floor": 14,
+      "bathrooms": 1,
+      "finishType": "EXTRA_SUPER_LUX",
+      "type": "chalets",
+      "paymentMethod": "Installments",
+      "sellerInfo": "1"
+    },
+    {
+      "_id": "19",
+      "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+      "location": {
+        "name": "New Cairo",
+        "key": "newCairo"
+      },
+      "description": "Twin House 200m for sale in D Bay - North Coast",
+      "avatar": "https://joeschmoe.io/api/v1/jess",
+      "section": "rent",
+      "price": 12000,
+      "property": false,
+      "area": 559,
+      "rooms": 6,
+      "Floor": 14,
+      "bathrooms": 1,
+      "finishType": "EXTRA_SUPER_LUX",
+      "type": "chalets",
+      "paymentMethod": "Installments",
+      "sellerInfo": "1"
+    },
+    {
+      "_id": "20",
+      "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+      "location": {
+        "name": "New Cairo",
+        "key": "newCairo"
+      },
+      "description": "Twin House 200m for sale in D Bay - North Coast",
+      "avatar": "https://joeschmoe.io/api/v1/jess",
+      "section": "sale",
+      "price": 12000,
+      "property": false,
+      "area": 559,
+      "rooms": 6,
+      "Floor": 14,
+      "bathrooms": 1,
+      "finishType": "EXTRA_SUPER_LUX",
+      "type": "chalets",
+      "paymentMethod": "Installments",
+      "sellerInfo": "1"
+    },
+    {
+      "_id": "21",
+      "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
+      "location": {
+        "name": "New Cairo",
+        "key": "newCairo"
+      },
+      "description": "Twin House 200m for sale in D Bay - North Coast",
+      "avatar": "https://joeschmoe.io/api/v1/jess",
+      "section": "sale",
+      "price": 12000,
+      "property": false,
+      "area": 559,
+      "rooms": 6,
+      "Floor": 14,
+      "bathrooms": 1,
+      "finishType": "EXTRA_SUPER_LUX",
+      "type": "chalets",
+      "paymentMethod": "Installments",
+      "sellerInfo": "3"
+    }
+  ],
   "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
-  "profile": { "name": "typicode" }
+  "profile": [{ "name": "typicode" }, { "name": "typicode" }]
 }

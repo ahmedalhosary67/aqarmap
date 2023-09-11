@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Button,
   Col,
@@ -12,11 +12,27 @@ import { useParams } from "react-router-dom";
 import "./main.css";
 import FilteredCard from "../../component/filteredCard";
 import Sider from "../../component/sider";
+import axios from "axios";
 
 export default function Properies() {
   const params = useParams();
 
   console.log(params);
+
+  // useEffect(() => {
+  //   init();
+  // }, []);
+
+  // async function init() {
+  //   await axios
+  //     .get("http://localhost:3000/data")
+  //     .then((res) => {
+  //       console.log(res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }
 
   return (
     <>

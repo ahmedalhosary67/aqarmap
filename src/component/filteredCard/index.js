@@ -4,12 +4,28 @@ import { Col } from "react-bootstrap";
 import CardD from "../card";
 import originalFakeData from "../../services/data.json";
 import { Data } from "../../context/context";
+import axios from "axios";
 
 export default function FilteredCard({ properties }) {
   const { data } = useContext(Data);
-  const [allData] = useState(originalFakeData);
+  const [allData , setAllData] = useState([]);
   const [filteredFakeData, setFilteredFakeData] = useState([]);
   const params = useParams();
+
+  useEffect(() => {
+    init();
+  }, []);
+
+  async function init() {
+    await axios
+      .get("http://localhost:3000/data")
+      .then((res) => {
+        setAllData(res.data)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 
   useEffect(() => {
     filtration();
