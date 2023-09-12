@@ -1,6 +1,7 @@
 {
   "name": "aqarmap",
   "version": "0.1.0",
+  "icon": "./image/Emblem.png",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",
