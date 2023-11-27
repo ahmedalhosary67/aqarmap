@@ -17,22 +17,22 @@ import axios from "axios";
 export default function Properies() {
   const params = useParams();
 
-  console.log(params);
+  // console.log(params);
 
-  // useEffect(() => {
-  //   init();
-  // }, []);
+  useEffect(() => {
+    init();
+  }, []);
 
-  // async function init() {
-  //   await axios
-  //     .get("http://localhost:3000/data")
-  //     .then((res) => {
-  //       console.log(res.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }
+  async function init() {
+    await axios
+      .get("http://localhost:3000")
+      .then((res) => {
+        console.log("done",res);
+      })
+      .catch((err) => {
+        console.log("err",err);
+      });
+  }
 
   return (
     <>

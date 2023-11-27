@@ -11,6 +11,7 @@ import RangeNumber from "../../component/rangeNumbers";
 
 function SearchFilter() {
   const [state, setState] = useState({});
+  const [propertyType2, setPropertyType2] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams([]);
   const navigate = useNavigate();
   const [countLocations, setCountLocations] = useState(0);
@@ -22,7 +23,16 @@ function SearchFilter() {
     const clone = { ...state };
     clone[name] = e;
     setState(clone);
+    name === "type" && propertyType.find((item) => item.key === e).children
+      ? setPropertyType2(propertyType.find((item) => item.key === e).children)
+      : setPropertyType2([]);
+
     name === "location" && setCountLocations(e.length);
+  };
+  const handleChange2 = (name, e) => {
+    const clone = { ...state };
+    clone[name] = e;
+    setState(clone);
   };
 
   const handleSubmit = (e) => {
@@ -62,10 +72,10 @@ function SearchFilter() {
                 Label={"Property Type"}
               />
               <SelectTab
-                onChange={handleChange}
+                onChange={handleChange2}
                 name={"type"}
                 searchParams={searchParams}
-                FilterData={propertyType}
+                FilterData={propertyType2}
               />
 
               <br />

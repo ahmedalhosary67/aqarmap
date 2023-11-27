@@ -31,7 +31,9 @@ export default function SelectTab({
       ) : (
         <Tab.Container
           onSelect={(e) => onChange(name, e)}
-          defaultActiveKey={searchParams.get(name) || FilterData[0].key}
+          defaultActiveKey={
+            searchParams.get(name) || (FilterData[0] && FilterData[0].key)
+          }
         >
           <Form.Label>{Label}</Form.Label>
           <Nav variant="pills" className="Property2">
