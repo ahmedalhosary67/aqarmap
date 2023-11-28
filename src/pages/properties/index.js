@@ -25,9 +25,9 @@ export default function Properies() {
 
   async function init() {
     await axios
-      .get("http://localhost:3000")
+      .get("http://localhost:3000/data")
       .then((res) => {
-        console.log("done",res);
+        console.log("done",res.data);
       })
       .catch((err) => {
         console.log("err",err);

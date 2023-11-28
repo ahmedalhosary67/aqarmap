@@ -3,12 +3,12 @@ import SellerInfoCard from "../sellerInfoCard";
 import TopAgentCard from "../topAgentCard";
 import RelatedPropertyCard from "../relatedPropertyCard";
 
-function Sider({userInfo , topAgent, relatedProperty}) {
+function Sider({ userInfo, topAgent, relatedProperty, cardData }) {
   return (
     <>
-    {userInfo && <SellerInfoCard />}
-    {topAgent && <TopAgentCard />}
-    {relatedProperty && <RelatedPropertyCard />}
+      {userInfo && <SellerInfoCard cardData={cardData} />}
+      {topAgent && <TopAgentCard />}
+      {relatedProperty && <RelatedPropertyCard />}
     </>
   );
 }

@@ -7,6 +7,7 @@ import Form2 from "./form2";
 import { useNavigate } from "react-router-dom";
 import { Data } from "../../context/context";
 import allData from "../../services/data.json";
+import axios from "axios";
 
 export default function ListOfProperties() {
   const navigate = useNavigate();
@@ -25,7 +26,15 @@ export default function ListOfProperties() {
       ...values,
       // propertyType: data.propertyType[data.propertyType.length - 1],
     });
-    navigate("/");
+    axios
+      .post("http://localhost:3000/data", {
+        ...listingData,
+        ...values,
+        // propertyType: data.propertyType[data.propertyType.length - 1],
+      })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+    // navigate("/");
   };
 
   useEffect(() => {

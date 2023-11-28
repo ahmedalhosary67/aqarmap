@@ -13,7 +13,7 @@ import "./style.css";
 
 const CardD = ({ cardData }) => {
   const {
-    _id,
+    id,
     img,
     avatar,
     price,
@@ -29,7 +29,7 @@ const CardD = ({ cardData }) => {
     setLoading(false);
   }, 1000);
   const handleOnClick = useCallback(
-    () => navigate("/Listing/" + _id, { push: true }),
+    () => navigate("/Listing/" + id, { push: true }),
     [navigate]
   );
   return (

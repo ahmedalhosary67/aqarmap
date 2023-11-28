@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "_id": "1",
+      "id": 1,
       "img": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
       "location": {
         "name": "Ain Sokhna",
@@ -16,10 +16,10 @@
       "rooms": 2,
       "type": "apartments",
       "paymentMethod": "Installments",
-      "sellerInfo": "1"
+      "sellerInfo": 1
     },
     {
-      "_id": "2",
+      "id": 2,
       "img": "https://www.utep.edu/extendeduniversity/utepconnect/blog/november-2018/is-online-education-as-effective-as-traditional-on-campus-schooling.jpg",
       "location": {
         "name": "بيت الوطن التكميلي, 6 أكتوبر",
@@ -33,10 +33,10 @@
       "area": 500,
       "type": "villas",
       "paymentMethod": "Cash",
-      "sellerInfo": "4"
+      "sellerInfo": 4
     },
     {
-      "_id": "3",
+      "id": 3,
       "img": "https://www.besanttechnologies.com/wp-content/uploads/2019/11/online-training-1.png",
       "location": {
         "name": "Ain Sokhna",
@@ -52,10 +52,10 @@
       "bathrooms": 1,
       "type": "chalets",
       "paymentMethod": "Cash",
-      "sellerInfo": "1"
+      "sellerInfo": 1
     },
     {
-      "_id": "4",
+      "id": 4,
       "img": "https://fakeimg.pl/350x200/?text=Hello",
       "location": {
         "name": "North Coast",
@@ -71,10 +71,10 @@
       "bathrooms": 1,
       "type": "land",
       "paymentMethod": "Cash",
-      "sellerInfo": "1"
+      "sellerInfo": 1
     },
     {
-      "_id": "5",
+      "id": 5,
       "img": "https://fakeimg.pl/350x200/?text=North-Coast",
       "location": {
         "name": "North Coast",
@@ -90,10 +90,10 @@
       "bathrooms": 1,
       "type": "apartments",
       "paymentMethod": "Cash",
-      "sellerInfo": "1"
+      "sellerInfo": 1
     },
     {
-      "_id": "6",
+      "id": 6,
       "img": "https://fakeimg.pl/350x200/?text=New-Cairo",
       "location": {
         "name": "New Cairo",
@@ -109,10 +109,10 @@
       "bathrooms": 2,
       "type": "apartments",
       "paymentMethod": "Installments",
-      "sellerInfo": "1"
+      "sellerInfo": 1
     },
     {
-      "_id": "7",
+      "id": 7,
       "img": "https://fakeimg.pl/350x200/?text=Porto-ElSokhna",
       "location": {
         "name": "Jebal El Sokhna - Porto El Sokhna",
@@ -128,10 +128,10 @@
       "bathrooms": 1,
       "type": "apartments",
       "paymentMethod": "Cash",
-      "sellerInfo": "1"
+      "sellerInfo": 1
     },
     {
-      "_id": "8",
+      "id": 8,
       "img": "https://fakeimg.pl/350x200/?text=Porto-ElSokhna",
       "location": {
         "name": "Jebal El Sokhna - Porto El Sokhna",
@@ -146,10 +146,10 @@
       "rooms": 3,
       "type": "villas",
       "paymentMethod": "Cash",
-      "sellerInfo": "1"
+      "sellerInfo": 1
     },
     {
-      "_id": "9",
+      "id": 9,
       "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
       "location": {
         "name": "New Cairo",
@@ -167,10 +167,10 @@
       "finishType": "EXTRA_SUPER_LUX",
       "type": "chalets",
       "paymentMethod": "Installments",
-      "sellerInfo": "1"
+      "sellerInfo": 1
     },
     {
-      "_id": "10",
+      "id": 10,
       "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
       "location": {
         "name": "New Cairo",
@@ -188,10 +188,10 @@
       "finishType": "EXTRA_SUPER_LUX",
       "type": "chalets",
       "paymentMethod": "Installments",
-      "sellerInfo": "2"
+      "sellerInfo": 2
     },
     {
-      "_id": "11",
+      "id": 11,
       "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
       "location": {
         "name": "New Cairo",
@@ -209,10 +209,10 @@
       "finishType": "EXTRA_SUPER_LUX",
       "type": "chalets",
       "paymentMethod": "Installments",
-      "sellerInfo": "2"
+      "sellerInfo": 2
     },
     {
-      "_id": "12",
+      "id": 12,
       "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
       "location": {
         "name": "New Cairo",
@@ -230,10 +230,10 @@
       "finishType": "EXTRA_SUPER_LUX",
       "type": "chalets",
       "paymentMethod": "Installments",
-      "sellerInfo": "3"
+      "sellerInfo": 3
     },
     {
-      "_id": "13",
+      "id": 13,
       "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
       "location": {
         "name": "New Cairo",
@@ -251,10 +251,10 @@
       "finishType": "EXTRA_SUPER_LUX",
       "type": "chalets",
       "paymentMethod": "Installments",
-      "sellerInfo": "2"
+      "sellerInfo": 2
     },
     {
-      "_id": "14",
+      "id": 14,
       "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
       "location": {
         "name": "New Cairo",
@@ -272,10 +272,10 @@
       "finishType": "EXTRA_SUPER_LUX",
       "type": "chalets",
       "paymentMethod": "Installments",
-      "sellerInfo": "1"
+      "sellerInfo": 1
     },
     {
-      "_id": "15",
+      "id": 15,
       "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
       "location": {
         "name": "New Cairo",
@@ -293,10 +293,10 @@
       "finishType": "EXTRA_SUPER_LUX",
       "type": "chalets",
       "paymentMethod": "Installments",
-      "sellerInfo": "1"
+      "sellerInfo": 1
     },
     {
-      "_id": "16",
+      "id": 16,
       "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
       "location": {
         "name": "New Cairo",
@@ -314,10 +314,10 @@
       "finishType": "EXTRA_SUPER_LUX",
       "type": "chalets",
       "paymentMethod": "Installments",
-      "sellerInfo": "1"
+      "sellerInfo": 1
     },
     {
-      "_id": "17",
+      "id": 17,
       "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
       "location": {
         "name": "New Cairo",
@@ -335,10 +335,10 @@
       "finishType": "EXTRA_SUPER_LUX",
       "type": "chalets",
       "paymentMethod": "Installments",
-      "sellerInfo": "1"
+      "sellerInfo": 1
     },
     {
-      "_id": "18",
+      "id": 18,
       "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
       "location": {
         "name": "New Cairo",
@@ -356,10 +356,10 @@
       "finishType": "EXTRA_SUPER_LUX",
       "type": "chalets",
       "paymentMethod": "Installments",
-      "sellerInfo": "1"
+      "sellerInfo": 1
     },
     {
-      "_id": "19",
+      "id": 19,
       "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
       "location": {
         "name": "New Cairo",
@@ -377,10 +377,10 @@
       "finishType": "EXTRA_SUPER_LUX",
       "type": "chalets",
       "paymentMethod": "Installments",
-      "sellerInfo": "1"
+      "sellerInfo": 1
     },
     {
-      "_id": "20",
+      "id": 20,
       "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
       "location": {
         "name": "New Cairo",
@@ -398,10 +398,10 @@
       "finishType": "EXTRA_SUPER_LUX",
       "type": "chalets",
       "paymentMethod": "Installments",
-      "sellerInfo": "1"
+      "sellerInfo": 1
     },
     {
-      "_id": "21",
+      "id": 21,
       "img": "https://fakeimg.pl/350x200/?text=new-Cairo",
       "location": {
         "name": "New Cairo",
@@ -419,9 +419,111 @@
       "finishType": "EXTRA_SUPER_LUX",
       "type": "chalets",
       "paymentMethod": "Installments",
-      "sellerInfo": "3"
+      "sellerInfo": 3
+    },
+    {
+      "propertyType": [
+        "furnished"
+      ],
+      "listingSection": "sale",
+      "governorates": "3",
+      "city": "93",
+      "title_en": "fhfsh",
+      "description_en": "sfdhdsfhfd",
+      "title_ar": "shfdshfdsh",
+      "description_ar": "fdhsfdhfdh",
+      "youtubeVideoUrl": "hfdhfdhfdhdf",
+      "phoneNumber": "5634643634643",
+      "size": "4",
+      "view": "mainStreet",
+      "price": "44",
+      "paymentMethod": "All",
+      "rooms": "4",
+      "floor": "4",
+      "bathrooms": "1",
+      "yearOfBuilding": 2018,
+      "typeOfFinished": "SuperLux",
+      "shahrAqary": "no",
+      "PropertyTypeInMarket": "fromOwner",
+      "propertyAddress": "dgsdgsdfgh sgd agsdgsa egaga egaweg dga sdg",
+      "id": 22
     }
   ],
-  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
-  "profile": [{ "name": "typicode" }, { "name": "typicode" }]
+  "users": [
+    {
+      "id": 1,
+      "name": "Ahmed",
+      "phoneNo": "111111111111",
+      "whatsApp": "111111111111",
+      "email": "ads@dasf",
+      "img": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+      "avatar": "https://joesch.moe/api/v1/male/random",
+      "userType": "privateOwner",
+      "password": "0000",
+      "isLogin": false
+    },
+    {
+      "id": 2,
+      "name": "Mohamed",
+      "phoneNo": "111111111111",
+      "whatsApp": "111111111111",
+      "email": "ads@dasf",
+      "img": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+      "avatar": "https://joesch.moe/api/v1/male/random",
+      "userType": "privateOwner",
+      "password": "0000",
+      "isLogin": false
+    },
+    {
+      "id": 3,
+      "name": "Hassan",
+      "phoneNo": "111111111111",
+      "whatsApp": "111111111111",
+      "email": "ads@dasf",
+      "img": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+      "avatar": "https://joesch.moe/api/v1/male/random",
+      "userType": "privateOwner",
+      "password": "0000",
+      "isLogin": false
+    },
+    {
+      "id": 4,
+      "name": "Asmaa",
+      "phoneNo": "111111111111",
+      "whatsApp": "111111111111",
+      "email": "ads@dasf",
+      "img": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+      "avatar": "https://joesch.moe/api/v1/female/random",
+      "userType": "privateOwner",
+      "password": "0000",
+      "isLogin": false
+    },
+    {
+      "id": 5,
+      "name": "Esraa",
+      "phoneNo": "111111111111",
+      "whatsApp": "111111111111",
+      "email": "ads@dasf",
+      "img": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+      "avatar": "https://joesch.moe/api/v1/female/random",
+      "userType": "privateOwner",
+      "password": "0000",
+      "isLogin": false
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": [
+    {
+      "name": "typicode"
+    },
+    {
+      "name": "typicode"
+    }
+  ]
 }
